@@ -1,0 +1,51 @@
+\chapter*{PHỤ LỤC}
+\addcontentsline{toc}{chapter}{PHỤ LỤC}
+
+\section*{Phụ lục A: Ma trận truy vết yêu cầu (Traceability Matrix)}
+
+\begin{table}[h!]
+\centering
+\caption{Ma trận truy vết kỹ thuật từ Yêu cầu đến Mã nguồn và Test Cases}
+\begin{tabular}{|l|l|p{4.5cm}|p{5cm}|l|}
+\hline
+\rowcolor{tablehead}
+\textbf{Mã YC} & \textbf{Tên chức năng} & \textbf{Tệp mã nguồn thực hiện} & \textbf{Ca kiểm thử Pytest} & \textbf{Trạng thái} \\ \hline
+REQ-AUTH & Xác thực \& RBAC & backend/app/routers/auth.py & test\_auth.py::test\_login\_success & PASSED \\ \hline
+REQ-PROD & Quản lý Sản phẩm & backend/app/routers/products.py & test\_transactions.py::test\_import & PASSED \\ \hline
+REQ-SUPP & Quản lý Nhà cung cấp & backend/app/routers/suppliers.py & test\_transactions.py::test\_import & PASSED \\ \hline
+REQ-LOC & Quản lý Vị trí kệ & backend/app/models/product.py & Tích hợp trong Product Master & PASSED \\ \hline
+REQ-IMP & Quản lý Nhập kho & backend/app/routers/imports.py & test\_transactions.py::test\_import & PASSED \\ \hline
+REQ-EXP & Xuất kho chống âm & backend/app/routers/exports.py & test\_transactions.py::test\_export\_neg & PASSED \\ \hline
+REQ-AI-ANL & Phân tích kho AI & backend/app/services/ai\_service.py & test\_ai.py::test\_ai\_inventory\_report & PASSED \\ \hline
+REQ-AI-NLP & Trợ lý hỏi đáp NLP & backend/app/services/ai\_service.py & test\_ai.py::test\_ai\_assistant\_ask & PASSED \\ \hline
+REQ-DASH & Bảng điều khiển KPI & backend/app/routers/dashboard.py & frontend/src/pages/Dashboard.jsx & PASSED \\ \hline
+REQ-AUDIT & Nhật ký biến động & backend/app/models/stock\_movement.py & test\_transactions.py::test\_import & PASSED \\ \hline
+\end{tabular}
+\end{table}
+
+\section*{Phụ lục B: Toàn văn DDL Cơ sở dữ liệu chuẩn 3NF}
+\lstinputlisting[language=SQL, caption={Toàn văn script DDL khởi tạo 11 bảng CSDL chuẩn 3NF}]{ddl.sql}
+
+\section*{Phụ lục C: Bảng tra cứu đối chiếu Bài kiểm tra kỹ năng và Tiêu chí Rubric}
+
+\begin{table}[h!]
+\centering
+\caption{Bảng tra cứu đối chiếu 12 bài kiểm tra kỹ năng và tiêu chí Rubric AIA331}
+\begin{tabular}{|l|p{4.5cm}|p{3.5cm}|p{2.5cm}|l|}
+\hline
+\rowcolor{tablehead}
+\textbf{Bài kiểm tra} & \textbf{Kỹ năng công nghệ} & \textbf{Tiêu chí Rubric} & \textbf{Tệp kiểm thử} & \textbf{Kết quả} \\ \hline
+Bài KT 1 (TC-01) & Xác thực JWT Bearer & Tiêu chí 02, 21, 28 & test\_auth.py & PASSED \\ \hline
+Bài KT 2 (TC-02) & Bảo mật sai mật khẩu & Tiêu chí 28, 29 & test\_auth.py & PASSED \\ \hline
+Bài KT 3 (TC-03) & Giải mã User Profile & Tiêu chí 23, 28 & test\_auth.py & PASSED \\ \hline
+Bài KT 4 (TC-04) & Phân quyền RBAC 403 & Tiêu chí 02, 23 & test\_auth.py & PASSED \\ \hline
+Bài KT 5 (TC-05) & Nhập kho cộng tồn & Tiêu chí 05, 14, 21 & test\_tx.py & PASSED \\ \hline
+Bài KT 6 (TC-06) & Xuất kho trừ tồn & Tiêu chí 06, 15, 21 & test\_tx.py & PASSED \\ \hline
+Bài KT 7 (TC-07) & ACID Rollback chống âm & Tiêu chí 06, 10, 30 & test\_tx.py & PASSED \\ \hline
+Bài KT 8 (TC-08) & Kế toán chặn xuất & Tiêu chí 23 & test\_tx.py & PASSED \\ \hline
+Bài KT 9 (TC-09) & Báo cáo kho AI & Tiêu chí 07, 19, 26 & test\_ai.py & PASSED \\ \hline
+Bài KT 10 (TC-10) & Dự báo tồn \& Burn-rate & Tiêu chí 17, 18, 20 & test\_ai.py & PASSED \\ \hline
+Bài KT 11 (TC-11) & Phát hiện bất thường & Tiêu chí 07, 20 & test\_ai.py & PASSED \\ \hline
+Bài KT 12 (TC-12) & Trợ lý NLP Grounding & Tiêu chí 16, 19, 27 & test\_ai.py & PASSED \\ \hline
+\end{tabular}
+\end{table}

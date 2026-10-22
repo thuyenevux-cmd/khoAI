@@ -1,0 +1,39 @@
+\chapter{PHÂN TÍCH YÊU CẦU VÀ MÔ HÌNH HÓA HỆ THỐNG}
+
+\section{Yêu cầu chức năng (Functional Requirements)}
+Hệ thống bao gồm các phân hệ nghiệp vụ cốt lõi:
+\begin{itemize}
+    \item \textbf{FR01 - Xác thực \& RBAC:} Đăng nhập JWT Bearer, phân quyền 3 vai trò (Admin, Warehouse, Accountant).
+    \item \textbf{FR02 - Quản lý Danh mục \& Vị trí:} Sản phẩm, Nhà cung cấp, Khu vực kệ (Zone/Shelf).
+    \item \textbf{FR03 - Quản lý Giao dịch Nhập/Xuất kho:} Kiểm tra số lượng tồn, khóa dòng (Row locking), trừ kho an toàn.
+    \item \textbf{FR04 - Bộ não Phân tích AI:} Dự báo số ngày cạn kho, cảnh báo thiếu hụt, phát hiện dị biệt (Z-score).
+    \item \textbf{FR05 - Trợ lý Hỏi Đáp Kho AI (NLP):} Hộp thoại thông minh tra cứu số liệu kho bằng ngôn ngữ tự nhiên.
+    \item \textbf{FR06 - Nhật ký Kiểm toán (Audit Logs):} Ghi vết bất biến mọi giao dịch thay đổi CSDL.
+\end{itemize}
+
+\section{Sơ đồ Use Case tổng thể}
+Sơ đồ Use Case phân định ranh giới chức năng giữa 3 nhóm tác nhân được trình bày tại Hình~\ref{fig:usecase}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.92\textwidth]{02_so_do_usecase_tong_the.png}
+    \caption{Sơ đồ Use Case tổng thể hệ thống Quản lý Kho AI (Nhóm 11)}
+    \label{fig:usecase}
+\end{figure}
+
+\section{Lược đồ hoạt động quy trình Nhập kho và Xuất kho}
+Quy trình nhập kho và xuất kho được chuẩn hóa với các bước kiểm tra chất lượng và số lượng tồn khả dụng (Hình~\ref{fig:act_import} và Hình~\ref{fig:act_export}).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{04_luoc_do_hoat_dong_nhap_kho.png}
+    \caption{Lược đồ hoạt động quy trình nghiệp vụ Nhập kho}
+    \label{fig:act_import}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{05_luoc_do_hoat_dong_xuat_kho.png}
+    \caption{Lược đồ hoạt động quy trình nghiệp vụ Xuất kho và kiểm tra tồn an toàn}
+    \label{fig:act_export}
+\end{figure}

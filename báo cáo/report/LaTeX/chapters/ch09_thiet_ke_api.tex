@@ -1,0 +1,59 @@
+\chapter{THIẾT KẾ HỆ THỐNG VÀ XÂY DỰNG API BACKEND}
+
+\section{Cấu trúc mã nguồn Backend và mô hình phân tầng}
+
+Mã nguồn Backend được tổ chức theo chuẩn kiến trúc sạch (Clean Architecture), phân tách độc lập giữa các tầng Router, Schema, Model, Core và Service. Cấu trúc thư mục tại backend/app bao gồm:
+
+- core/: Chứa cấu hình ứng dụng (config.py), kết nối cơ sở dữ liệu (database.py) và thuật toán bảo mật (security.py).
+
+- models/: Chứa định nghĩa 11 lớp thực thể SQLAlchemy ORM tương ứng với các bảng CSDL.
+
+- schemas/: Chứa các mô hình Pydantic định nghĩa cấu trúc dữ liệu đầu vào (Request DTO) và đầu ra (Response DTO).
+
+- routers/: Chứa các mô-đun xử lý endpoint RESTful API phân theo chức năng nghiệp vụ (auth.py, products.py, imports.py, exports.py, ai.py...).
+
+- services/: Chứa logic nghiệp vụ phức tạp như AI Service và phân tích dữ liệu.
+
+\section{Cơ chế Dependency Injection trong FastAPI}
+
+FastAPI cung cấp hệ thống Dependency Injection mạnh mẽ được tận dụng triệt để trong dự án:
+
+- get\_db: Khởi tạo phiên kết nối CSDL (SQLAlchemy Session) cho từng HTTP Request và tự động đóng phiên (db.close()) an toàn trong khối finally.
+
+- require\_roles: Kiểm tra giải mã JWT token trong tiêu đề Authorization, trích xuất thông tin người dùng và đối chiếu vai trò (RBAC). Nếu người dùng không có vai trò hợp lệ, hệ thống tự động chặn lại với mã lỗi HTTP 403 Forbidden trước khi yêu cầu đi vào logic xử lý.
+
+\section{Danh mục các Endpoint RESTful API chính thức của hệ thống}
+
+Bảng dưới đây tổng hợp danh mục các Endpoint API chính thức được triển khai trong hệ thống:
+
+\begin{table}[h!]
+\centering
+\caption{Danh mục các Endpoint RESTful API chính thức của hệ thống}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\rowcolor{tablehead}
+\textbf{Phương thức} & \textbf{Đường dẫn Endpoint} & \textbf{Mô tả chức năng nghiệp vụ} & \textbf{Quyền hạn yêu cầu} \\ \hline
+POST & /api/auth/login & Xác thực tài khoản và trả về JWT Bearer Token & Công khai (Public) \\ \hline
+GET & /api/auth/me & Lấy thông tin chi tiết của người dùng đang đăng nhập & Tất cả vai trò đã xác thực \\ \hline
+GET & /api/auth/users & Danh sách người dùng và phân quyền tài khoản & Chỉ ADMIN \\ \hline
+GET & /api/products & Danh sách sản phẩm kèm số lượng tồn kho khả dụng & Tất cả vai trò đã xác thực \\ \hline
+POST & /api/products & Thêm mới một mã sản phẩm vào danh mục & ADMIN, WAREHOUSE \\ \hline
+GET & /api/products/{id} & Xem thông tin chi tiết một sản phẩm theo mã định danh & Tất cả vai trò đã xác thực \\ \hline
+GET & /api/suppliers & Danh mục đối tác nhà cung cấp & Tất cả vai trò đã xác thực \\ \hline
+POST & /api/suppliers & Thêm mới nhà cung cấp & ADMIN, WAREHOUSE \\ \hline
+POST & /api/imports & Tạo phiếu nhập kho, tăng số lượng tồn và ghi nhật ký & ADMIN, WAREHOUSE \\ \hline
+POST & /api/exports & Tạo phiếu xuất kho có kiểm tra tồn chống âm kho & ADMIN, WAREHOUSE \\ \hline
+GET & /api/dashboard/stats & Tổng hợp các chỉ số KPI kho thời gian thực & Tất cả vai trò đã xác thực \\ \hline
+POST & /api/ai/inventory-report & Sinh báo cáo phân tích xuất nhập tồn AI & ADMIN, WAREHOUSE, ACCOUNTANT \\ \hline
+POST & /api/ai/restock-recommendation & Sinh danh sách gợi ý nhập hàng tối ưu & ADMIN, WAREHOUSE, ACCOUNTANT \\ \hline
+POST & /api/ai/anomaly-summary & Sinh báo cáo phát hiện biến động bất thường & ADMIN, WAREHOUSE, ACCOUNTANT \\ \hline
+POST & /api/ai/ask & Hỏi đáp thông tin kho với Trợ lý AI tự nhiên & ADMIN, WAREHOUSE, ACCOUNTANT \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Xử lý dữ liệu với Pydantic Schemas và chuẩn hóa mã lỗi HTTP}
+
+Toàn bộ dữ liệu gửi lên và trả về đều được chuẩn hóa nghiêm ngặt thông qua các lớp Pydantic. Nếu dữ liệu gửi lên thiếu trường bắt buộc hoặc sai định dạng (ví dụ số lượng âm), FastAPI tự động trả về HTTP 422 Unprocessable Entity kèm mô tả vị trí lỗi cụ thể.
+
+Các mã trạng thái HTTP chuẩn hóa được áp dụng nhất quán: 200 OK (Thành công), 201 Created (Tạo mới thành công), 400 Bad Request (Lỗi nghiệp vụ như xuất âm kho), 401 Unauthorized (Chưa xác thực hoặc token hết hạn), 403 Forbidden (Không đủ quyền hạn) và 404 Not Found (Không tìm thấy tài nguyên).
+

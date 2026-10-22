@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2026-09-22T08:00:00.000Z" agent="Antigravity" version="22.0.0" type="device">
+  <diagram id="diag_SubsystemUsersAI" name="SubsystemUsersAI">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="hdr_3a" value="&lt;b&gt;SƠ ĐỒ ERD CHI TIẾT PHÂN HỆ QUẢN TRỊ, PHÂN QUYỀN RBAC &amp;amp; AI LOGS&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_roles_a" value="&lt;b&gt;ROLES (Vai trò)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ role_name: VARCHAR(30) [U] (ADMIN/WAREHOUSE/ACCOUNTANT)&lt;br&gt;+ description: VARCHAR(255)&lt;br&gt;+ created_at: DATETIME DEFAULT NOW" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="520" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_users_a" value="&lt;b&gt;USERS (Tài khoản người dùng)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ role_id: INTEGER [FK -> roles.id]&lt;br&gt;+ username: VARCHAR(50) [U]&lt;br&gt;+ password_hash: VARCHAR(255) (Argon2id băm an toàn)&lt;br&gt;+ full_name: VARCHAR(100)&lt;br&gt;+ email: VARCHAR(100)&lt;br&gt;+ is_active: BOOLEAN&lt;br&gt;+ created_at: DATETIME DEFAULT NOW" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="640" y="100" width="580" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_audit_a" value="&lt;b&gt;AUDIT_LOGS (Vết kiểm toán bất biến)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ user_id: INTEGER [FK -> users.id]&lt;br&gt;+ action_type: VARCHAR(30) (CREATE / UPDATE / DELETE)&lt;br&gt;+ entity_name: VARCHAR(50)&lt;br&gt;+ entity_id: INTEGER&lt;br&gt;+ old_value: TEXT (Snapshot JSON cũ)&lt;br&gt;+ new_value: TEXT (Snapshot JSON mới)&lt;br&gt;+ ip_address: VARCHAR(45)&lt;br&gt;+ created_at: DATETIME DEFAULT NOW" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="50" y="340" width="520" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_ai_logs_a" value="&lt;b&gt;AI_QUERY_LOGS (Nhật ký AI &amp;amp; Bối cảnh Ground-Truth)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ user_id: INTEGER [FK -> users.id]&lt;br&gt;+ query_type: VARCHAR(30) (RESTOCK / ANOMALY / QA)&lt;br&gt;+ prompt_text: TEXT (Câu hỏi tự nhiên)&lt;br&gt;+ context_snapshot: TEXT (Ground-Truth JSON snapshot)&lt;br&gt;+ response_text: TEXT (Câu trả lời Markdown)&lt;br&gt;+ execution_time_ms: INTEGER (Thời gian thực thi ms)&lt;br&gt;+ created_at: DATETIME DEFAULT NOW" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="640" y="340" width="580" height="210" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_a1" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_roles_a" target="tb_users_a" />
+        <mxCell id="r_a2" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_users_a" target="tb_audit_a" />
+        <mxCell id="r_a3" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_users_a" target="tb_ai_logs_a" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

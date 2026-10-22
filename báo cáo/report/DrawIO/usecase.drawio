@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" modified="2026-09-19T09:00:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="diag_usecase" name="UseCase Diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="boundary" value="&lt;b&gt;Hệ Thống Quản Lý Kho Tích Hợp AI&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=2;align=center;verticalAlign=top;spacingTop=10;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="260" y="90" width="760" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="act_admin" value="Quản Trị Viên (Admin)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="60" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_warehouse" value="Thủ Kho (Warehouse)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#ecfdf5;strokeColor=#10b981;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="60" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_accountant" value="Kế Toán (Accountant)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#fef3c7;strokeColor=#f59e0b;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="220" width="60" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_ai" value="Dịch vụ AI (AI Service)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#faf5ff;strokeColor=#a855f7;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="500" width="60" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uc1" value="UC01: Đăng nhập &amp;amp; Xác thực JWT" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="140" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc2" value="UC05: Quản lý Sản phẩm &amp;amp; Định mức" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#10b981;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="360" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc3" value="UC06: Tạo Phiếu Nhập &amp;amp; Cập nhật tồn" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#10b981;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="430" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc4" value="UC07: Tạo Phiếu Xuất &amp;amp; Trừ tồn" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#10b981;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="500" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc5" value="UC09: Dự báo Tồn kho AI" style="ellipse;whiteSpace=wrap;html=1;fillColor=#faf5ff;strokeColor=#a855f7;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="440" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc6" value="UC10: Trợ lý Hỏi Đáp Kho AI NLP" style="ellipse;whiteSpace=wrap;html=1;fillColor=#faf5ff;strokeColor=#a855f7;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="520" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" style="endArrow=none;html=1;strokeColor=#3b82f6;" edge="1" parent="1" source="act_admin" target="uc1" />
+        <mxCell id="l2" style="endArrow=none;html=1;strokeColor=#10b981;" edge="1" parent="1" source="act_warehouse" target="uc2" />
+        <mxCell id="l3" style="endArrow=none;html=1;strokeColor=#10b981;" edge="1" parent="1" source="act_warehouse" target="uc3" />
+        <mxCell id="l4" style="endArrow=none;html=1;strokeColor=#10b981;" edge="1" parent="1" source="act_warehouse" target="uc4" />
+        <mxCell id="l5" style="endArrow=none;html=1;strokeColor=#a855f7;" edge="1" parent="1" source="act_warehouse" target="uc5" />
+        <mxCell id="l6" style="endArrow=none;html=1;strokeColor=#a855f7;" edge="1" parent="1" source="act_ai" target="uc5" />
+        <mxCell id="l7" style="endArrow=none;html=1;strokeColor=#a855f7;" edge="1" parent="1" source="act_ai" target="uc6" />
+    
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

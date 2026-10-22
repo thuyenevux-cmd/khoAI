@@ -1,0 +1,58 @@
+\chapter{KẾ HOẠCH VÀ KỊCH BẢN KIỂM THỬ HỆ THỐNG}
+
+\section{Chiến lược và mục tiêu kiểm thử phần mềm}
+
+Chiến lược kiểm thử của dự án tuân theo mô hình Kim tự tháp kiểm thử (Test Pyramid), tập trung vào kiểm thử tự động (Automated Testing) ở cấp độ Tích hợp (Integration Tests) và Kiểm thử đơn vị (Unit Tests) thông qua framework kiểm thử Pytest. Mục tiêu kiểm thử là chứng minh mọi yêu cầu chức năng từ REQ-AUTH đến REQ-AUDIT đều hoạt động chính xác theo đặc tả.
+
+\section{Thiết kế bộ kịch bản kiểm thử 12 Test Cases chi tiết}
+
+Bộ kịch bản kiểm thử bao gồm 12 trường hợp kiểm thử tự động bao phủ toàn diện 3 nhóm chức năng trọng yếu: Xác thực \& Phân quyền, Giao dịch kho \& Chống âm tồn, và Phân tích Trí tuệ nhân tạo:
+
+\begin{table}[h!]
+\centering
+\caption{Ma trận thiết kế 12 kịch bản kiểm thử tự động của hệ thống}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\rowcolor{tablehead}
+\textbf{Mã TC} & \textbf{Tên kịch bản kiểm thử} & \textbf{Mô-đun kiểm thử} & \textbf{Dữ liệu đầu vào} & \textbf{Kết quả kỳ vọng} \\ \hline
+TC-01 & Kiểm thử đăng nhập thành công & test\_auth.py & username: admin\_test, pass: Admin@123 & HTTP 200, trả về JWT access\_token hợp lệ \\ \hline
+TC-02 & Kiểm thử từ chối đăng nhập sai mật khẩu & test\_auth.py & username: admin\_test, pass: WrongPassword & HTTP 401 Unauthorized \\ \hline
+TC-03 & Kiểm thử lấy thông tin người dùng hiện tại & test\_auth.py & Header Authorization Bearer Admin Token & HTTP 200, đúng thông tin username và role ADMIN \\ \hline
+TC-04 & Kiểm thử kiểm soát phân quyền RBAC & test\_auth.py & Header Warehouse Token gọi GET /api/auth/users & HTTP 403 Forbidden (Chặn nhân viên kho xem DS tài khoản) \\ \hline
+TC-05 & Kiểm thử giao dịch nhập kho thành công & test\_transactions.py & Phiếu nhập 10 sp cho product\_id hợp lệ & HTTP 201, số lượng tồn kho tăng đúng 10 đơn vị \\ \hline
+TC-06 & Kiểm thử giao dịch xuất kho thành công & test\_transactions.py & Phiếu xuất 5 sp (nhỏ hơn tồn kho khả dụng) & HTTP 201, số lượng tồn kho giảm đúng 5 đơn vị \\ \hline
+TC-07 & Kiểm thử từ chối xuất kho vượt tồn (Chống âm kho) & test\_transactions.py & Phiếu xuất 9999 sp (vượt quá tồn kho thực tế) & HTTP 400 Bad Request, Rollback, tồn kho giữ nguyên \\ \hline
+TC-08 & Kiểm thử phân quyền kế toán không được xuất kho & test\_transactions.py & Header Accountant Token gọi POST /api/exports & HTTP 403 Forbidden (Kế toán không được tạo phiếu xuất) \\ \hline
+TC-09 & Kiểm thử sinh báo cáo xuất nhập tồn AI & test\_ai.py & Yêu cầu POST /api/ai/inventory-report kỳ 30 ngày & HTTP 200, success=True, có markdown\_report và snapshot \\ \hline
+TC-10 & Kiểm thử sinh gợi ý tái đặt hàng AI & test\_ai.py & Yêu cầu POST /api/ai/restock-recommendation & HTTP 200, success=True, trả về bảng ưu tiên nhập hàng \\ \hline
+TC-11 & Kiểm thử tóm tắt phát hiện bất thường AI & test\_ai.py & Yêu cầu POST /api/ai/anomaly-summary & HTTP 200, success=True, trả về danh sách cảnh báo \\ \hline
+TC-12 & Kiểm thử Trợ lý hỏi đáp kho bằng NLP & test\_ai.py & Câu hỏi: 'Kho còn bao nhiêu bàn phím cơ?' & HTTP 200, trả về câu trả lời chính xác dựa trên CSDL \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Bảng tra cứu bài kiểm tra kỹ năng và vị trí mã nguồn (Skill Test Directory)}
+
+Để phục vụ công tác nghiệm thu và kiểm định chất lượng đồ án, bảng dưới đây cung cấp chỉ dẫn tường minh cho người chấm để tra cứu chính xác từng bài kiểm tra kỹ năng công nghệ (từ Bài kiểm tra số 1 đến Bài kiểm tra số 12), kỹ năng cốt lõi được kiểm chứng, tệp mã nguồn hiện thực hóa và phương thức kích hoạt kiểm thử trực tiếp trên máy tính:
+
+\begin{table}[h!]
+\centering
+\caption{Bảng tra cứu đối chiếu 12 bài kiểm tra kỹ năng công nghệ và vị trí mã nguồn}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\rowcolor{tablehead}
+\textbf{Số hiệu bài KT} & \textbf{Mã Test Case} & \textbf{Kỹ năng công nghệ được kiểm định} & \textbf{Tệp kiểm thử Pytest} & \textbf{Lệnh thực thi độc lập} \\ \hline
+Bài KT số 1 & TC-01 & Xác thực danh tính \& cấp mã JWT Bearer Token & tests/test\_auth.py & pytest tests/test\_auth.py -k test\_login\_success \\ \hline
+Bài KT số 2 & TC-02 & Bảo mật tài khoản \& từ chối khi sai mật khẩu & tests/test\_auth.py & pytest tests/test\_auth.py -k test\_login\_failure \\ \hline
+Bài KT số 3 & TC-03 & Giải mã Payload Token \& trích xuất User Profile & tests/test\_auth.py & pytest tests/test\_auth.py -k test\_get\_me \\ \hline
+Bài KT số 4 & TC-04 & Kiểm soát phân quyền RBAC (Chặn truy cập trái phép 403) & tests/test\_auth.py & pytest tests/test\_auth.py -k test\_user\_management\_rbac \\ \hline
+Bài KT số 5 & TC-05 & Giao dịch Nhập kho \& cộng dồn tồn kho tự động & tests/test\_transactions.py & pytest tests/test\_transactions.py -k test\_import \\ \hline
+Bài KT số 6 & TC-06 & Giao dịch Xuất kho \& trừ số lượng tồn khả dụng & tests/test\_transactions.py & pytest tests/test\_transactions.py -k test\_export\_success \\ \hline
+Bài KT số 7 & TC-07 & Toàn vẹn ACID Rollback \& Chống âm kho (Anti-Negative Stock) & tests/test\_transactions.py & pytest tests/test\_transactions.py -k test\_export\_transaction\_refuse\_overflow \\ \hline
+Bài KT số 8 & TC-08 & Phân quyền vai trò Kế toán không được phép xuất kho & tests/test\_transactions.py & pytest tests/test\_transactions.py -k test\_accountant\_cannot\_create\_export \\ \hline
+Bài KT số 9 & TC-09 & Trích xuất CSDL \& sinh báo cáo kho AI Markdown & tests/test\_ai.py & pytest tests/test\_ai.py -k test\_ai\_inventory\_report \\ \hline
+Bài KT số 10 & TC-10 & Thuật toán dự báo tốc độ tiêu thụ \& gợi ý nhập hàng & tests/test\_ai.py & pytest tests/test\_ai.py -k test\_ai\_restock\_recommendation \\ \hline
+Bài KT số 11 & TC-11 & Phát hiện biến động xuất nhập bất thường \& rủi ro kho & tests/test\_ai.py & pytest tests/test\_ai.py -k test\_ai\_anomaly\_summary \\ \hline
+Bài KT số 12 & TC-12 & Trợ lý hỏi đáp tự nhiên NLP với Strict Grounding & tests/test\_ai.py & pytest tests/test\_ai.py -k test\_ai\_assistant\_ask \\ \hline
+\end{tabular}
+\end{table}
+

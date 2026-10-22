@@ -1,0 +1,27 @@
+<mxfile host="app.diagrams.net" modified="2026-09-22T08:00:00.000Z" agent="Antigravity" version="22.0.0" type="device">
+  <diagram id="diag_SubsystemInventoryTrans" name="SubsystemInventoryTrans">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="hdr_3c" value="&lt;b&gt;SƠ ĐỒ ERD CHI TIẾT PHÂN HỆ QUẢN LÝ TỒN KHO &amp;amp; GIAO DỊCH XUẤT NHẬP&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_inv_c" value="&lt;b&gt;INVENTORY_ITEMS (Tồn kho thực tế tại vị trí kệ)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ product_id: INTEGER [FK -> products.id]&lt;br&gt;+ location_id: INTEGER [FK -> locations.id]&lt;br&gt;+ current_stock: INTEGER CHECK(current_stock &gt;= 0)&lt;br&gt;+ batch_number: VARCHAR(50) (Số lô sản xuất)&lt;br&gt;+ expiry_date: DATE (Hạn sử dụng lô)&lt;br&gt;+ last_audited_at: DATETIME (Ngày kiểm kê gần nhất)&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="580" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_trans_c" value="&lt;b&gt;INVENTORY_TRANSACTIONS (Phiếu giao dịch kho)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ transaction_code: VARCHAR(50) [U] (Vd: PN-2026-001, PX-2026-001)&lt;br&gt;+ transaction_type: VARCHAR(20) (IMPORT / EXPORT / ADJUSTMENT)&lt;br&gt;+ supplier_id: INTEGER [FK -> suppliers.id]&lt;br&gt;+ created_by: INTEGER [FK -> users.id]&lt;br&gt;+ total_amount: DECIMAL(15,2) DEFAULT 0.00&lt;br&gt;+ note: TEXT&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="700" y="100" width="600" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_trans_items_c" value="&lt;b&gt;INVENTORY_TRANSACTION_ITEMS (Chi tiết từng dòng mặt hàng trong phiếu)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ transaction_id: INTEGER [FK -> inventory_transactions.id]&lt;br&gt;+ product_id: INTEGER [FK -> products.id]&lt;br&gt;+ location_id: INTEGER [FK -> locations.id]&lt;br&gt;+ quantity: INTEGER CHECK(quantity &gt; 0)&lt;br&gt;+ unit_price: DECIMAL(12,2) NOT NULL&lt;br&gt;+ subtotal: DECIMAL(15,2) NOT NULL&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="360" y="360" width="640" height="190" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_c1" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_trans_c" target="tb_trans_items_c" />
+        <mxCell id="r_c2" value="Cập nhật số dư kho" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;dashed=1;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_trans_items_c" target="tb_inv_c" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

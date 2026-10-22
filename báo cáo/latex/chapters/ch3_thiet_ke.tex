@@ -1,0 +1,43 @@
+\chapter{THIẾT KẾ KIẾN TRÚC VÀ CƠ SỞ DỮ LIỆU}
+
+\section{Thiết kế Kiến trúc 3 tầng (3-Tier Architecture)}
+Hệ thống được thiết kế theo chuẩn kiến trúc 3 tầng phân tách độc lập (Hình~\ref{fig:arch}):
+\begin{itemize}
+    \item \textbf{Presentation Tier:} Single Page Application (React Vite, Tailwind CSS, Lucide Icons, Smart Table Renderer).
+    \item \textbf{Application Logic Tier:} FastAPI Async (Python), Pydantic Data Validation, AI Dual-layer Engine, RBAC Security.
+    \item \textbf{Data Tier:} Hệ quản trị CSDL quan hệ 11 bảng chuẩn hóa 3NF và dịch vụ đám mây Google Gemini.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{01_so_do_kien_truc_he_thong.png}
+    \caption{Sơ đồ Kiến trúc tổng thể 3 tầng hệ thống Quản lý Kho AI (Nhóm 11)}
+    \label{fig:arch}
+\end{figure}
+
+\section{Thiết kế Cơ sở dữ liệu 11 bảng chuẩn hóa 3NF}
+Cơ sở dữ liệu được tổ chức chặt chẽ với 11 bảng: \texttt{roles}, \texttt{users}, \texttt{categories}, \texttt{suppliers}, \texttt{locations}, \texttt{products}, \texttt{inventory\_items}, \texttt{inventory\_transactions}, \texttt{inventory\_transaction\_items}, \texttt{audit\_logs}, \texttt{ai\_query\_logs} (Hình~\ref{fig:erd}).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.98\textwidth]{03_so_do_erd_11_bang.png}
+    \caption{Sơ đồ thực thể liên kết (ERD) 11 bảng CSDL chuẩn 3NF (Nhóm 11)}
+    \label{fig:erd}
+\end{figure}
+
+\section{Sơ đồ tuần tự giao dịch và Sitemap điều hướng}
+Sơ đồ tuần tự thể hiện sự phối hợp chặt chẽ giữa các thành phần phần mềm để hoàn thành giao dịch an toàn (Hình~\ref{fig:seq_trans} và Hình~\ref{fig:sitemap}).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.92\textwidth]{06_so_do_tuan_tu_nhap_xuat.png}
+    \caption{Sơ đồ tuần tự xử lý giao dịch kho an toàn}
+    \label{fig:seq_trans}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.92\textwidth]{10_so_do_sitemap_giao_dien.png}
+    \caption{Sơ đồ cấu trúc điều hướng phân hệ giao diện người dùng (Sitemap)}
+    \label{fig:sitemap}
+\end{figure}

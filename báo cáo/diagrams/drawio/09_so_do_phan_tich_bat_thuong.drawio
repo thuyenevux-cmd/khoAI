@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" modified="2026-09-22T08:00:00.000Z" agent="Antigravity" version="22.0.0" type="device">
+  <diagram id="diag_AnomalyFlowchart" name="AnomalyFlowchart">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="hdr9" value="&lt;b&gt;LƯU ĐỒ THUẬT TOÁN PHÁT HIỆN BẤT THƯỜNG &amp;amp; TÍNH BURN-RATE&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a_step1" value="Thu thập dữ liệu giao dịch xuất kho 30 ngày gần nhất (T = 30)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_step2" value="Tính tốc độ xuất bình quân ngày: V = Tổng xuất 30 ngày / 30" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="300" y="190" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_dec1" value="V &amp;gt; 0 (Có phát sinh xuất kho)?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontStyle=1;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="380" y="280" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="a_zero" value="&lt;b&gt;TỒN KHO ỔN ĐỊNH&lt;/b&gt;&lt;br&gt;Gán Days = 999 ngày" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="840" y="290" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a_step3" value="Tính số ngày cạn tồn: DepletionDays = Stock / V" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_dec2" value="Days &amp;lt;= 7 ngày hoặc Stock &amp;lt; min_threshold?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontStyle=1;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="380" y="490" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="a_alert" value="Kích hoạt cảnh báo khẩn: Cần lập kế hoạch nhập hàng" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="300" y="610" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_step4" value="Tính độ lệch chuẩn sản lượng xuất ngày: Z-score" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="300" y="700" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_dec3" value="|Z-score| &amp;gt; 2.5 (Dị biệt sản lượng)?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontStyle=1;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="380" y="790" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="a_flag" value="Gắn cờ Bất thường (Anomaly Flag) &amp;amp; Đề xuất kiểm kê" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="300" y="910" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_end" value="Kết thúc: Lưu kết quả phân tích vào bộ nhớ &amp;amp; CSDL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1000" width="500" height="60" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net" modified="2026-09-22T08:00:00.000Z" agent="Antigravity" version="22.0.0" type="device">
+  <diagram id="diag_MasterERD" name="MasterERD">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="hdr_erd" value="&lt;b&gt;SƠ ĐỒ THỰC THỂ LIÊN KẾT (ERD) - 11 BẢNG CSDL CHUẨN 3NF&lt;/b&gt;&lt;br&gt;Dự án Hệ thống Quản lý Kho có Tích hợp AI - AIA331 | Nhóm 11" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1680" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Column 1: Governance & Logs -->
+        <mxCell id="tb_roles" value="&lt;b&gt;ROLES&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ role_name: VARCHAR(30) [U]&lt;br&gt;+ description: VARCHAR(255)&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="60" y="110" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_users" value="&lt;b&gt;USERS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ role_id: INTEGER [FK]&lt;br&gt;+ username: VARCHAR(50) [U]&lt;br&gt;+ password_hash: VARCHAR(255)&lt;br&gt;+ full_name: VARCHAR(100)&lt;br&gt;+ email: VARCHAR(100)&lt;br&gt;+ is_active: BOOLEAN&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="60" y="260" width="480" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_audit" value="&lt;b&gt;AUDIT_LOGS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ user_id: INTEGER [FK]&lt;br&gt;+ action_type: VARCHAR(30)&lt;br&gt;+ entity_name: VARCHAR(50)&lt;br&gt;+ entity_id: INTEGER&lt;br&gt;+ old_value: TEXT (JSON)&lt;br&gt;+ new_value: TEXT (JSON)&lt;br&gt;+ ip_address: VARCHAR(45)&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="60" y="470" width="480" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_ai_logs" value="&lt;b&gt;AI_QUERY_LOGS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ user_id: INTEGER [FK]&lt;br&gt;+ query_type: VARCHAR(30)&lt;br&gt;+ prompt_text: TEXT&lt;br&gt;+ context_snapshot: TEXT (JSON)&lt;br&gt;+ response_text: TEXT&lt;br&gt;+ execution_time_ms: INTEGER&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="60" y="690" width="480" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- Column 2: Master Data -->
+        <mxCell id="tb_cat" value="&lt;b&gt;CATEGORIES&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ code: VARCHAR(50) [U]&lt;br&gt;+ name: VARCHAR(100)&lt;br&gt;+ description: TEXT&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="620" y="110" width="480" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_sup" value="&lt;b&gt;SUPPLIERS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ name: VARCHAR(150)&lt;br&gt;+ contact_person: VARCHAR(100)&lt;br&gt;+ phone: VARCHAR(20)&lt;br&gt;+ email: VARCHAR(100)&lt;br&gt;+ address: VARCHAR(255)&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="620" y="270" width="480" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_loc" value="&lt;b&gt;LOCATIONS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ code: VARCHAR(50) [U]&lt;br&gt;+ zone: VARCHAR(20)&lt;br&gt;+ shelf_level: VARCHAR(20)&lt;br&gt;+ max_capacity: INTEGER&lt;br&gt;+ is_active: BOOLEAN&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="620" y="460" width="480" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_prod" value="&lt;b&gt;PRODUCTS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ category_id: INTEGER [FK]&lt;br&gt;+ supplier_id: INTEGER [FK]&lt;br&gt;+ sku: VARCHAR(50) [U]&lt;br&gt;+ name: VARCHAR(150)&lt;br&gt;+ unit: VARCHAR(20)&lt;br&gt;+ cost_price: DECIMAL(12,2)&lt;br&gt;+ selling_price: DECIMAL(12,2)&lt;br&gt;+ min_threshold: INTEGER&lt;br&gt;+ max_threshold: INTEGER&lt;br&gt;+ is_active: BOOLEAN&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="620" y="650" width="480" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- Column 3: Inventory & Transactions -->
+        <mxCell id="tb_inv" value="&lt;b&gt;INVENTORY_ITEMS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ product_id: INTEGER [FK]&lt;br&gt;+ location_id: INTEGER [FK]&lt;br&gt;+ current_stock: INTEGER&lt;br&gt;+ batch_number: VARCHAR(50)&lt;br&gt;+ expiry_date: DATE&lt;br&gt;+ last_audited_at: DATETIME&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="110" width="500" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_trans" value="&lt;b&gt;INVENTORY_TRANSACTIONS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ transaction_code: VARCHAR(50) [U]&lt;br&gt;+ transaction_type: VARCHAR(20)&lt;br&gt;+ supplier_id: INTEGER [FK]&lt;br&gt;+ created_by: INTEGER [FK]&lt;br&gt;+ total_amount: DECIMAL(15,2)&lt;br&gt;+ note: TEXT&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="320" width="500" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_trans_items" value="&lt;b&gt;INVENTORY_TRANSACTION_ITEMS&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ transaction_id: INTEGER [FK]&lt;br&gt;+ product_id: INTEGER [FK]&lt;br&gt;+ location_id: INTEGER [FK]&lt;br&gt;+ quantity: INTEGER&lt;br&gt;+ unit_price: DECIMAL(12,2)&lt;br&gt;+ subtotal: DECIMAL(15,2)&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="540" width="500" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="rel1" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_roles" target="tb_users" />
+        <mxCell id="rel2" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_users" target="tb_audit" />
+        <mxCell id="rel3" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_users" target="tb_ai_logs" />
+        <mxCell id="rel4" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_cat" target="tb_prod" />
+        <mxCell id="rel5" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_sup" target="tb_prod" />
+        <mxCell id="rel6" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_prod" target="tb_inv" />
+        <mxCell id="rel7" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_loc" target="tb_inv" />
+        <mxCell id="rel8" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_trans" target="tb_trans_items" />
+        <mxCell id="rel9" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_prod" target="tb_trans_items" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

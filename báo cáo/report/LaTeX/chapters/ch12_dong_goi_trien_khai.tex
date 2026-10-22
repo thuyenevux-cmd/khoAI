@@ -1,0 +1,36 @@
+\chapter{ĐÓNG GÓI, CẤU HÌNH VÀ TRIỂN KHAI HỆ THỐNG}
+
+\section{Cấu trúc tổ chức thư mục dự án chuẩn hóa}
+
+Dự án được phân tách rành mạch thành 2 thư mục độc lập: backend/ (mã nguồn máy chủ Python FastAPI) và frontend/ (mã nguồn ứng dụng giao diện React Vite), tạo điều kiện thuận lợi cho việc phát triển song song và đóng gói container độc lập.
+
+\section{Quản lý cấu hình biến môi trường an toàn qua .env và .env.example}
+
+Mọi thông tin bí mật như Chuỗi kết nối CSDL (DATABASE\_URL), Khóa bí mật JWT (SECRET\_KEY) và Khóa API trí tuệ nhân tạo (OPENAI\_API\_KEY) đều được lưu trữ trong tệp cấu hình môi trường .env và được nạp tự động qua pydantic-settings. Dự án cung cấp sẵn tệp .env.example mẫu, cam kết tuyệt đối không lưu cứng (hardcode) bất kỳ thông tin nhạy cảm nào trong mã nguồn đưa lên hệ thống quản lý phiên bản Git.
+
+\section{Hướng dẫn khởi chạy hệ thống môi trường phát triển (Local Development)}
+
+Các bước khởi chạy hệ thống trên máy trạm phát triển:
+
+1. Khởi chạy Backend:
+
+   cd backend
+
+   python -m venv venv \&\& source venv/bin/activate (hoặc venv\Scripts\activate trên Windows)
+
+   pip install -r requirements.txt
+
+   uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+2. Khởi chạy Frontend:
+
+   cd frontend
+
+   npm install
+
+   npm run dev (Ứng dụng sẵn sàng tại http://localhost:3000 hoặc http://localhost:5173)
+
+\section{Đóng gói Docker Container và quy trình sao lưu khôi phục CSDL}
+
+Dự án cung cấp tệp Dockerfile chuẩn hóa cho Backend dựa trên nền ảnh python:3.14-slim nhẹ nhàng, hỗ trợ khởi chạy đa tầng. Quy trình sao lưu CSDL được thực hiện định kỳ bằng lệnh pg\_dump (đối với PostgreSQL) hoặc sao chép snapshot inventory.db an toàn, bảo đảm khả năng phục hồi dữ liệu sau sự cố (RTO < 15 phút, RPO = 0).
+

@@ -1,0 +1,34 @@
+\chapter{KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN TƯƠNG LAI}
+
+\section{Những kết quả đạt được của đồ án}
+
+Sau quá trình nghiên cứu, thiết kế và phát triển nghiêm túc, đề tài đã hoàn thành xuất sắc toàn bộ các mục tiêu đặt ra ban đầu:
+
+1. Xây dựng hoàn chỉnh một ứng dụng quản lý kho hiện đại theo kiến trúc 3 tầng Client-Server với Backend FastAPI (Python 3.14), Frontend React Vite và Cơ sở dữ liệu quan hệ chuẩn hóa 3NF.
+
+2. Giải quyết triệt để bài toán an toàn dữ liệu kế toán kho thông qua cơ chế kiểm soát giao dịch ACID và cơ chế từ chối xuất âm kho tự động.
+
+3. Ứng dụng thành công Trí tuệ Nhân tạo vào quản trị kho với kiến trúc lai (Hybrid AI Engine) kết hợp mô hình ngôn ngữ và Rule Engine nội bộ, loại bỏ hoàn toàn nguy cơ ảo giác nhờ Strict Grounding và an toàn ngoại lệ chia cho 0.
+
+4. Xây dựng hệ thống kiểm thử tự động toàn diện với 12 test cases đạt tỷ lệ thành công 100\% trên framework Pytest.
+
+5. Thiết lập đầy đủ bộ tài liệu kỹ thuật chuẩn mực công nghiệp bao gồm 11 sơ đồ kỹ thuật UML/DFD/ERD, 5 ảnh chụp giao diện thực tế và thuyết minh chi tiết theo chuẩn ICTU.
+
+\section{Những hạn chế tồn tại}
+
+Bên cạnh những kết quả tích cực đã đạt được, hệ thống vẫn còn một số hạn chế nhất định do giới hạn về thời gian và phạm vi môn học:
+
+- Hệ thống hiện tại mới tối ưu hóa cho mô hình một kho hàng trung tâm duy nhất, chưa hỗ trợ điều chuyển hàng hóa giữa nhiều chi nhánh kho khác nhau (Inter-warehouse Transfer).
+
+- Thao tác nhập liệu tại hiện trường vẫn phụ thuộc vào giao diện web trên máy tính hoặc tablet, chưa tích hợp trực tiếp với các thiết bị phần cứng chuyên dụng như máy quét mã vạch cầm tay hoặc cổng đọc RFID tự động.
+
+\section{Hướng phát triển mở rộng trong tương lai}
+
+Trong các giai đoạn phát triển tiếp theo, nhóm nghiên cứu định hướng mở rộng hệ thống theo các hướng chính sau:
+
+1. Tích hợp thiết bị phần cứng IoT: Phát triển ứng dụng di động hỗ trợ quét mã vạch (Barcode / QR Code) qua camera và kết nối đầu đọc RFID để tự động hóa quy trình kiểm kê hàng loạt mà không cần nhập liệu thủ công.
+
+2. Nâng cấp mô hình quản lý đa kho (Multi-warehouse Architecture): Mở rộng cơ sở dữ liệu để quản lý chuỗi kho phân tán và tự động đề xuất lộ trình điều chuyển hàng hóa giữa các kho nhằm giảm thiểu chi phí vận chuyển.
+
+3. Huấn luyện mô hình AI chuyên biệt (Fine-tuned Local LLM): Triển khai mô hình ngôn ngữ mã nguồn mở (như Llama 3 hoặc Mistral) được tinh chỉnh riêng trên tập dữ liệu logistics nội bộ, bảo đảm tính tự chủ hoàn toàn và bảo mật dữ liệu cấp doanh nghiệp.
+

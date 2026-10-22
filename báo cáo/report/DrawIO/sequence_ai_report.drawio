@@ -1,0 +1,19 @@
+<mxfile host="app.diagrams.net" modified="2026-09-19T09:00:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="diag_seq_ai" name="Sequence AI Report">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="u" value="Thủ kho" style="shape=umlLifeline;participant=umlActor;" vertex="1" parent="1"><mxGeometry x="80" y="80" width="80" height="400" as="geometry"/></mxCell>
+        <mxCell id="f" value="AI Console" style="shape=umlLifeline;" vertex="1" parent="1"><mxGeometry x="240" y="80" width="100" height="400" as="geometry"/></mxCell>
+        <mxCell id="b" value="FastAPI" style="shape=umlLifeline;" vertex="1" parent="1"><mxGeometry x="420" y="80" width="100" height="400" as="geometry"/></mxCell>
+        <mxCell id="ai" value="Gemini Cloud" style="shape=umlLifeline;" vertex="1" parent="1"><mxGeometry x="600" y="80" width="100" height="400" as="geometry"/></mxCell>
+        <mxCell id="m1" value="Hỏi đáp kho" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="u" target="f"><mxGeometry relative="1" as="geometry"><mxPoint y="140" as="offset"/></mxGeometry></mxCell>
+        <mxCell id="m2" value="POST /api/ai/ask" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="f" target="b"><mxGeometry relative="1" as="geometry"><mxPoint y="180" as="offset"/></mxGeometry></mxCell>
+        <mxCell id="m3" value="Ground-Truth Context + Prompt" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="b" target="ai"><mxGeometry relative="1" as="geometry"><mxPoint y="240" as="offset"/></mxGeometry></mxCell>
+    
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

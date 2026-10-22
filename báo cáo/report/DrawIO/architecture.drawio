@@ -1,0 +1,23 @@
+<mxfile host="app.diagrams.net" modified="2026-09-19T09:00:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="diag_arch" name="System Architecture">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="t1" value="&lt;b&gt;Tầng Trình Diễn (React Vite SPA)&lt;/b&gt;" style="rounded=1;fillColor=#eff6ff;strokeColor=#3b82f6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="600" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="&lt;b&gt;Tầng Nghiệp Vụ (FastAPI Async Backend)&lt;/b&gt;" style="rounded=1;fillColor=#ecfeff;strokeColor=#06b6d4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="240" width="600" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="&lt;b&gt;Tầng Dữ Liệu &amp;amp; AI (SQLite / Postgres + Gemini Cloud)&lt;/b&gt;" style="rounded=1;fillColor=#fef3c7;strokeColor=#f59e0b;" vertex="1" parent="1">
+          <mxGeometry x="100" y="400" width="600" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="REST JSON API" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#475569;" edge="1" parent="1" source="t1" target="t2" />
+        <mxCell id="e2" value="SQLAlchemy ORM &amp;amp; AI Requests" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#475569;" edge="1" parent="1" source="t2" target="t3" />
+    
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

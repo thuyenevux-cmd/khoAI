@@ -1,0 +1,17 @@
+<mxfile host="app.diagrams.net" modified="2026-09-19T09:00:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="diag_dfd" name="Data Flow Diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="ent1" value="Thủ kho / Admin" style="rounded=0;fillColor=#eff6ff;" vertex="1" parent="1"><mxGeometry x="80" y="120" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="proc1" value="P1: Xử lý Giao dịch" style="ellipse;fillColor=#ecfeff;" vertex="1" parent="1"><mxGeometry x="320" y="110" width="160" height="80" as="geometry"/></mxCell>
+        <mxCell id="store1" value="D1: Kho Dữ Liệu Tồn Kho" style="shape=partialRectangle;fillColor=#ecfdf5;" vertex="1" parent="1"><mxGeometry x="600" y="120" width="200" height="60" as="geometry"/></mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="ent1" target="proc1"/>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="proc1" target="store1"/>
+    
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

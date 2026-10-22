@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" modified="2026-09-22T08:00:00.000Z" agent="Antigravity" version="22.0.0" type="device">
+  <diagram id="diag_Architecture" name="Architecture">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="hdr" value="&lt;b&gt;SƠ ĐỒ KIẾN TRÚC TỔNG THỂ HỆ THỐNG 3 TẦNG (3-TIER ARCHITECTURE)&lt;/b&gt;&lt;br&gt;Nhóm 11 - AIA331 | Đại học Thái Nguyên (ICTU)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" value="&lt;b&gt;TẦNG 1: TRÌNH DIỄN (PRESENTATION TIER) - REACT VITE SPA&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontSize=14;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="1280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t1_1" value="&lt;b&gt;Dashboard &amp;amp; KPI Hub&lt;/b&gt;&lt;br&gt;• Thẻ chỉ số real-time&lt;br&gt;• Biểu đồ nhập/xuất 30 ngày&lt;br&gt;• Cảnh báo thiếu hàng" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="70" y="140" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="t1_2" value="&lt;b&gt;Nghiệp Vụ Kho Hàng&lt;/b&gt;&lt;br&gt;• Quản lý Sản phẩm, SKU&lt;br&gt;• Tạo phiếu Nhập/Xuất kho&lt;br&gt;• Quản lý Vị trí kệ, NCC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="370" y="140" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="t1_3" value="&lt;b&gt;AI Analytics &amp;amp; NLP Hub&lt;/b&gt;&lt;br&gt;• Trợ lý hỏi đáp tự nhiên&lt;br&gt;• Dự báo số ngày cạn kho&lt;br&gt;• Phát hiện dị biệt/bất thường" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="670" y="140" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="t1_4" value="&lt;b&gt;Bảo Mật &amp;amp; Quản Trị&lt;/b&gt;&lt;br&gt;• Xác thực Bearer JWT&lt;br&gt;• Phân quyền RBAC (3 Roles)&lt;br&gt;• Nhật ký kiểm toán Audit Logs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="970" y="140" width="320" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t2" value="&lt;b&gt;TẦNG 2: NGHIỆP VỤ (APPLICATION LOGIC TIER) - FASTAPI ASYNC PYTHON&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontSize=14;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="310" width="1280" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_1" value="&lt;b&gt;API Gateway / Routers&lt;/b&gt;&lt;br&gt;FastAPI Routers, CORS,&lt;br&gt;OAuth2PasswordBearer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="70" y="360" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_2" value="&lt;b&gt;Inventory &amp;amp; Core Services&lt;/b&gt;&lt;br&gt;Validation, Stock Deduct,&lt;br&gt;Row Locking, Audit Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="370" y="360" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_3" value="&lt;b&gt;AI Dual-Layer Engine&lt;/b&gt;&lt;br&gt;Lớp 1: Google Gemini Cloud&lt;br&gt;Lớp 2: Local Rule-Engine&lt;br&gt;Burn-rate &amp;amp; Outlier Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="670" y="360" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="t2_4" value="&lt;b&gt;Bảo Mật &amp;amp; RBAC Engine&lt;/b&gt;&lt;br&gt;Argon2 password hash,&lt;br&gt;SQLAlchemy ORM anti-SQLi,&lt;br&gt;Access Control Decorators" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="970" y="360" width="320" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t3" value="&lt;b&gt;TẦNG 3: DỮ LIỆU &amp;amp; ĐÁM MÂY (DATA PERSISTENCE &amp;amp; EXTERNAL AI LAYER)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontSize=14;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="540" width="1280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t3_1" value="&lt;b&gt;Cơ Sở Dữ Liệu Quan Hệ&lt;/b&gt;&lt;br&gt;SQLite / PostgreSQL (11 Bảng)&lt;br&gt;Chuẩn hóa 3NF, Alembic Migrations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="70" y="580" width="360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t3_2" value="&lt;b&gt;Audit Trail &amp;amp; Query Logs&lt;/b&gt;&lt;br&gt;Bảng audit_logs ghi vết thay đổi CSDL&lt;br&gt;Bảng ai_query_logs ghi nhận prompt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="470" y="580" width="380" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t3_3" value="&lt;b&gt;Google Gemini AI Cloud&lt;/b&gt;&lt;br&gt;gemini-1.5-flash / gemini-2.0&lt;br&gt;Ground-Truth Context Injection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="890" y="580" width="400" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="REST JSON API" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="t1" target="t2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="SQLAlchemy ORM &amp;amp; AI Requests" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="t2" target="t3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

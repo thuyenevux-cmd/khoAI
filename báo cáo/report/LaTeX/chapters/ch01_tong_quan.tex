@@ -1,0 +1,42 @@
+\chapter{TỔNG QUAN HỆ THỐNG QUẢN LÝ KHO VÀ ĐẶT VẤN ĐỀ}
+
+\section{Bối cảnh thực tế của quản lý kho hàng tại các doanh nghiệp phân phối thiết bị số}
+
+Trong kỷ nguyên chuyển đổi số và sự bùng nổ mạnh mẽ của thương mại điện tử, logistics và quản trị chuỗi cung ứng đóng vai trò xương sống quyết định năng lực cạnh tranh của doanh nghiệp. Đối với các đơn vị kinh doanh linh kiện điện tử, thiết bị tin học và thiết bị số, kho hàng là nơi tập trung phần lớn vốn lưu động của doanh nghiệp.
+
+Đặc thù của ngành hàng thiết bị số là tính đa dạng về mẫu mã, quy chuẩn kỹ thuật (SKU), vòng đời công nghệ ngắn và tốc độ giảm giá trị theo thời gian nhanh chóng. Nếu không quản trị tồn kho khoa học, doanh nghiệp sẽ phải đối mặt với nguy cơ kép: vừa ứ đọng vốn ở các mã hàng chậm luân chuyển (Dead Stock), vừa đứt gãy nguồn cung ở các mã hàng bán chạy do không kịp dự báo nhập hàng.
+
+\section{Những tồn tại và thách thức trong phương pháp quản lý kho truyền thống}
+
+Khảo sát thực tế tại các doanh nghiệp phân phối vừa và nhỏ (SME) cho thấy phương pháp quản lý kho truyền thống dựa vào bảng tính Excel hoặc sổ sách kế toán thủ công bộc lộ nhiều điểm yếu nghiêm trọng:
+
+1. Tính rời rạc và độ trễ dữ liệu cao: Việc ghi chép thủ công dẫn đến khoảng trễ dữ liệu từ vài giờ đến vài ngày. Quản trị viên không thể nắm bắt được số lượng tồn kho khả dụng (Available Stock) tại thời điểm thực để phê duyệt đơn hàng.
+
+2. Nguy cơ xuất âm kho và sai lệch số liệu: Bảng tính không có cơ chế khóa giao dịch đồng thời (Concurrency Lock). Khi nhiều nhân viên cùng xuất kho một mặt hàng, số lượng tồn có thể bị tính toán âm, gây sai lệch nghiêm trọng trên báo cáo tài chính.
+
+3. Thiếu khả năng dự báo và cảnh báo thông minh: Nhân viên quản lý kho hoàn toàn bị động trong việc phát hiện hàng sắp hết hoặc hàng tồn đọng. Việc đề xuất nhập hàng chủ yếu dựa vào cảm tính cá nhân, thiếu các căn cứ toán học và phân tích lịch sử xuất nhập.
+
+\section{Tính tất yếu và cơ hội ứng dụng Trí tuệ Nhân tạo (AI) trong quản trị kho}
+
+Sự phát triển vượt bậc của Trí tuệ Nhân tạo, đặc biệt là các mô hình ngôn ngữ lớn (LLM) và thuật toán phân tích dữ liệu, mang đến giải pháp đột phá cho bài toán quản lý kho thông minh. Ứng dụng AI cho phép:
+
+- Tự động hóa quá trình tính toán tốc độ xuất bán trung bình ngày (Daily Burn Rate) và dự báo số ngày còn đủ hàng tồn (Run-out in Days).
+
+- Đề xuất kế hoạch và số lượng nhập hàng tối ưu (Restock Recommendations) có tính đến định mức tồn an toàn và năng lực cung ứng của nhà cung cấp.
+
+- Phát hiện các biến động xuất kho bất thường trong thời gian thực để cảnh báo nguy cơ thất thoát hoặc gian lận.
+
+- Tích hợp trợ lý ảo ngôn ngữ tự nhiên (AI NLP Assistant) cho phép người dùng hỏi đáp thông tin kho bằng tiếng Việt hàng ngày mà không cần học các câu lệnh truy vấn phức tạp.
+
+\section{Mục tiêu nghiên cứu và giải pháp đề xuất}
+
+Mục tiêu của đề tài là xây dựng hoàn chỉnh 'Hệ thống Quản lý Kho có Tích hợp AI' (AI-Powered Inventory Management System) phục vụ doanh nghiệp phân phối thiết bị số, đáp ứng đầy đủ chuẩn mực kỹ thuật và tiêu chí học phần AIA331 của ICTU.
+
+Hệ thống được thiết kế theo kiến trúc phân tầng hiện đại: Tầng giao diện người dùng React Vite SPA, Tầng dịch vụ Backend FastAPI hiệu năng cao, và Tầng Cơ sở dữ liệu quan hệ chuẩn hóa 3NF kết hợp dịch vụ AI lai (Hybrid AI Engine) có cơ chế Fallback và Strict Grounding chống ảo giác.
+
+\section{Đối tượng và phạm vi nghiên cứu}
+
+Đối tượng nghiên cứu: Nghiệp vụ quản lý danh mục sản phẩm, nhà cung cấp, vị trí kệ kho, phiếu nhập kho, phiếu xuất kho, biến động tồn kho và trợ lý phân tích AI.
+
+Phạm vi áp dụng: Áp dụng cho kho hàng tổng của doanh nghiệp phân phối linh kiện thiết bị số với quy mô quản lý hàng nghìn SKU. Đồ án tập trung hoàn thiện tầng phần mềm lõi trên nền tảng Web; các tích hợp thiết bị phần cứng chuyên dụng (RFID, máy quét công nghiệp) được đề xuất trong hướng phát triển tương lai.
+

@@ -1,0 +1,41 @@
+\chapter{BẢO MẬT, KIỂM TOÁN VÀ TOÀN VẸN DỮ LIỆU}
+
+\section{Cơ chế xác thực JWT Bearer Token và quản lý phiên làm việc}
+
+Hệ thống áp dụng chuẩn công nghiệp JSON Web Token (JWT) theo cơ chế Bearer Token. Khi người dùng đăng nhập thành công, máy chủ ký một token mã hóa bằng thuật toán đối xứng HS256 với Secret Key bí mật lưu trữ an toàn trong biến môi trường. Token chứa định danh người dùng (sub), vai trò (role) và thời điểm hết hạn (exp). Tầng máy khách lưu token và đính kèm vào tiêu đề Authorization của mọi yêu cầu tiếp theo.
+
+\section{Mã hóa mật khẩu bảo mật một chiều với Argon2 / Bcrypt}
+
+Mật khẩu của người dùng tuyệt đối không bao giờ được lưu trữ dưới dạng văn bản thô (Plaintext). Hệ thống sử dụng thuật toán băm mật khẩu hiện đại Argon2id (kết hợp thư viện Passlib), có khả năng chống lại các cuộc tấn công dò mật khẩu bằng phần cứng chuyên dụng (GPU/ASIC) nhờ yêu cầu cao về bộ nhớ và độ trễ tính toán.
+
+\section{Mô hình phân quyền truy cập dựa trên vai trò (RBAC) 3 cấp độ}
+
+Hệ thống phân định 3 vai trò rõ rệt với ma trận phân quyền được kiểm soát chặt chẽ:
+
+\begin{table}[h!]
+\centering
+\caption{Ma trận phân quyền truy cập dựa trên vai trò (RBAC Matrix)}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\rowcolor{tablehead}
+\textbf{Chức năng nghiệp vụ} & \textbf{Quản trị viên (ADMIN)} & \textbf{Thủ kho (WAREHOUSE)} & \textbf{Kế toán (ACCOUNTANT)} \\ \hline
+Quản trị người dùng \& phân quyền & Toàn quyền (CRUD) & Không có quyền (403) & Không có quyền (403) \\ \hline
+Quản lý danh mục Sản phẩm \& Nhà cung cấp & Toàn quyền & Toàn quyền & Chỉ xem (Read-only) \\ \hline
+Lập phiếu Nhập kho & Toàn quyền & Toàn quyền & Không có quyền (403) \\ \hline
+Lập phiếu Xuất kho & Toàn quyền & Toàn quyền & Không có quyền (403) \\ \hline
+Xem số liệu tồn kho \& Bảng điều khiển KPI & Cho phép & Cho phép & Cho phép \\ \hline
+Xem phân tích AI \& Hỏi đáp trợ lý ảo & Cho phép & Cho phép & Cho phép \\ \hline
+Xem lịch sử nhật ký kiểm toán (Audit Trail) & Toàn quyền & Chỉ xem liên quan & Toàn quyền \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Quản lý giao dịch CSDL (Transaction ACID) và cơ chế Rollback chống âm tồn}
+
+Mọi thao tác thay đổi số lượng kho đều bắt buộc phải nằm trong một Database Transaction tuân thủ nghiêm ngặt 4 nguyên tắc ACID (Atomicity, Consistency, Isolation, Durability).
+
+Khi thực hiện xuất kho, nếu số lượng yêu cầu vượt quá tồn kho khả dụng, hệ thống kích hoạt db.rollback(), hủy bỏ mọi thay đổi và trả về lỗi 400 Bad Request. Cơ chế này đảm bảo không bao giờ tồn tại trạng thái dữ liệu dở dang hoặc tồn kho âm trong hệ thống.
+
+\section{Hệ thống ghi nhật ký kiểm toán (Audit Trail Logging)}
+
+Bảng stock\_movements đóng vai trò như một sổ cái kiểm toán bất biến (Immutable Audit Trail). Bất kỳ khi nào số lượng tồn trong bảng inventory bị thay đổi (do nhập, xuất hoặc điều chỉnh), một bản ghi biến động bắt buộc phải được tạo ra với đầy đủ thông tin: Mã sản phẩm, Loại biến động, Số lượng thay đổi, Tồn trước đó, Tồn mới, Người thực hiện và Dấu thời gian chính xác. Điều này đảm bảo tính minh bạch và khả năng truy vết trách nhiệm 100\% trong vận hành kho.
+

@@ -1,0 +1,36 @@
+\chapter{HIỆN THỰC HÓA VÀ KẾT QUẢ TRIỂN KHAI}
+
+\section{Môi trường cài đặt và Công nghệ}
+\begin{itemize}
+    \item \textbf{Backend:} Python 3.14, FastAPI Async, SQLAlchemy ORM, Pydantic v2, Jose JWT, Passlib (Argon2 / Bcrypt).
+    \item \textbf{Frontend:} Node.js v18+, React 18, Vite, Tailwind CSS, Lucide React, Axios.
+    \item \textbf{AI Cloud:} Thư viện \texttt{google-genai} kết nối mô hình Gemini 1.5 Flash.
+\end{itemize}
+
+\section{Kết quả kiểm thử tự động toàn diện (Pytest 100\% Passed)}
+Bảng~\ref{tab:tests} tổng hợp kết quả thực thi bộ kiểm thử tự động của hệ thống:
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Kết quả kiểm thử tự động hệ thống (Pytest Suite)}
+\label{tab:tests}
+\begin{tabularx}{\textwidth}{lXl}
+\toprule
+\textbf{Mã test} & \textbf{Tên hàm kiểm thử \& Kịch bản kiểm thử} & \textbf{Kết quả} \\
+\midrule
+TC01 & \texttt{test\_health\_check} - Kiểm tra API khởi động sẵn sàng & 100\% PASSED \\
+TC02 & \texttt{test\_login\_success} - Đăng nhập hợp lệ admin/Admin@123 & 100\% PASSED \\
+TC03 & \texttt{test\_login\_invalid\_password} - Đăng nhập sai mật khẩu (HTTP 401) & 100\% PASSED \\
+TC04 & \texttt{test\_get\_products\_list} - Lấy danh sách sản phẩm với Bearer Token & 100\% PASSED \\
+TC05 & \texttt{test\_create\_product\_admin} - Quyền Admin tạo sản phẩm mới & 100\% PASSED \\
+TC06 & \texttt{test\_create\_product\_forbidden} - Nhân viên không có quyền (HTTP 403) & 100\% PASSED \\
+TC07 & \texttt{test\_inventory\_import\_flow} - Tạo phiếu nhập kho và cộng dồn tồn & 100\% PASSED \\
+TC08 & \texttt{test\_inventory\_export\_insufficient} - Xuất vượt tồn bị chặn an toàn & 100\% PASSED \\
+TC09 & \texttt{test\_dashboard\_kpis} - Tính đúng 6 chỉ số KPI và định giá tài sản VNĐ & 100\% PASSED \\
+TC10 & \texttt{test\_ai\_restock\_forecast} - Dự báo nhu cầu nhập kho không lỗi & 100\% PASSED \\
+TC11 & \texttt{test\_ai\_anomaly\_detection} - Phát hiện dị biệt Z-score & 100\% PASSED \\
+TC12 & \texttt{test\_ai\_assistant\_ask} - Trợ lý hỏi đáp NLP trả về bảng Markdown \& JSON & 100\% PASSED \\
+\bottomrule
+\end{tabularx}
+\end{table}

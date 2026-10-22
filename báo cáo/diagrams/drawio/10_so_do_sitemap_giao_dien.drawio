@@ -1,0 +1,33 @@
+<mxfile host="app.diagrams.net" modified="2026-09-22T08:00:00.000Z" agent="Antigravity" version="22.0.0" type="device">
+  <diagram id="diag_FrontendSitemap" name="FrontendSitemap">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="hdr10" value="&lt;b&gt;SƠ ĐỒ ĐIỀU HƯỚNG CẤU TRÚC GIAO DIỆN (FRONTEND SITEMAP)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sm_root" value="&lt;b&gt;HỆ THỐNG QUẢN LÝ KHO AI&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="580" y="90" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c_1" value="&lt;b&gt;1. TỔNG QUAN&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="60" y="180" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c_2" value="&lt;b&gt;2. KHO HÀNG&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="340" y="180" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="&lt;b&gt;3. GIAO DỊCH&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="620" y="180" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="&lt;b&gt;4. AI HUB&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="900" y="180" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="&lt;b&gt;5. BẢO MẬT&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="180" width="240" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,30 @@
+<mxfile host="app.diagrams.net" modified="2026-09-22T08:00:00.000Z" agent="Antigravity" version="22.0.0" type="device">
+  <diagram id="diag_SubsystemMasterData" name="SubsystemMasterData">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="hdr_3b" value="&lt;b&gt;SƠ ĐỒ ERD CHI TIẾT PHÂN HỆ DANH MỤC HÀNG HÓA &amp;amp; VỊ TRÍ KỆ KHO&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_cat_b" value="&lt;b&gt;CATEGORIES (Danh mục nhóm hàng)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ code: VARCHAR(50) [U] (Vd: CAT-KEYBOARD)&lt;br&gt;+ name: VARCHAR(100) (Bàn phím cơ)&lt;br&gt;+ description: TEXT&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="520" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_sup_b" value="&lt;b&gt;SUPPLIERS (Nhà cung cấp đối tác)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ name: VARCHAR(150)&lt;br&gt;+ contact_person: VARCHAR(100)&lt;br&gt;+ phone: VARCHAR(20)&lt;br&gt;+ email: VARCHAR(100)&lt;br&gt;+ address: VARCHAR(255)&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="640" y="100" width="580" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_loc_b" value="&lt;b&gt;LOCATIONS (Vị trí ô kệ vật lý trong kho)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ code: VARCHAR(50) [U] (Định dạng: Zone-Shelf-Level: A1-01)&lt;br&gt;+ zone: VARCHAR(20) (Khu vực Zone A / Zone B)&lt;br&gt;+ shelf_level: VARCHAR(20) (Tầng 1 / Tầng 2)&lt;br&gt;+ max_capacity: INTEGER DEFAULT 500&lt;br&gt;+ is_active: BOOLEAN DEFAULT TRUE&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="50" y="320" width="520" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_prod_b" value="&lt;b&gt;PRODUCTS (Hàng hóa &amp;amp; SKU chuẩn)&lt;/b&gt;&lt;hr&gt;+ id: INTEGER [PK]&lt;br&gt;+ category_id: INTEGER [FK -> categories.id]&lt;br&gt;+ supplier_id: INTEGER [FK -> suppliers.id]&lt;br&gt;+ sku: VARCHAR(50) [U] (Mã sản phẩm duy nhất)&lt;br&gt;+ name: VARCHAR(150)&lt;br&gt;+ unit: VARCHAR(20) DEFAULT 'Cái'&lt;br&gt;+ cost_price: DECIMAL(12,2)&lt;br&gt;+ selling_price: DECIMAL(12,2)&lt;br&gt;+ min_threshold: INTEGER (Ngưỡng kích hoạt cảnh báo AI cạn tồn)&lt;br&gt;+ max_threshold: INTEGER (Sức chứa tối đa kho)&lt;br&gt;+ is_active: BOOLEAN&lt;br&gt;+ created_at: DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;align=left;spacingLeft=10;fontSize=13;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="640" y="320" width="580" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_b1" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_cat_b" target="tb_prod_b" />
+        <mxCell id="r_b2" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=2;fontFamily=Times New Roman;" edge="1" parent="1" source="tb_sup_b" target="tb_prod_b" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

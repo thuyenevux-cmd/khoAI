@@ -1,0 +1,45 @@
+\chapter{NGHIÊN CỨU CÔNG NGHỆ VÀ MÔ HÌNH HÓA KIẾN TRÚC}
+
+\section{Nghiên cứu nền tảng phát triển Backend: Python 3.14 và FastAPI}
+
+Python 3.14 là ngôn ngữ lập trình đa năng hiện đại với hiệu năng được cải thiện rõ rệt và hệ sinh thái thư viện AI/ML mạnh mẽ nhất hiện nay.
+
+FastAPI được lựa chọn làm nền tảng Backend nhờ các ưu thế công nghệ vượt trội: Tốc độ thực thi tiệm cận Go và NodeJS nhờ kiến trúc bất đồng bộ ASGI (Uvicorn); Tự động kiểm tra tính hợp lệ của dữ liệu đầu vào bằng Pydantic; Tự động sinh tài liệu chuẩn hóa OpenAPI/Swagger UI; Cơ chế Dependency Injection mạnh mẽ giúp quản lý phiên làm việc và phân quyền bảo mật chặt chẽ.
+
+\section{Nghiên cứu hệ thống Cơ sở dữ liệu: SQLite, PostgreSQL và SQLAlchemy ORM}
+
+Hệ thống hỗ trợ cơ chế lưu trữ kép linh hoạt: SQLite được sử dụng trong môi trường phát triển và kiểm thử tự động (Pytest) nhờ tính năng chạy bộ nhớ nhẹ nhàng; PostgreSQL được sử dụng trong môi trường vận hành thực tế nhờ khả năng xử lý đồng thời và hỗ trợ khóa dòng (Row-level Locking) an toàn.
+
+SQLAlchemy 2.0 đóng vai trò Object-Relational Mapper (ORM) giúp ánh xạ các thực thể cơ sở dữ liệu thành các lớp đối tượng Python, bảo vệ hệ thống tuyệt đối khỏi các lỗ hổng SQL Injection và tạo thuận lợi cho việc chuyển đổi hệ quản trị CSDL bên dưới.
+
+\section{Nghiên cứu nền tảng phát triển Frontend: React 18, Vite và TailwindCSS}
+
+Phía Client được xây dựng dưới dạng ứng dụng đơn trang (SPA) sử dụng React 18 kết hợp Vite build tool. Giao diện được thiết kế hiện đại, đáp ứng tốt trên mọi thiết bị nhờ TailwindCSS và bộ component Shadcn UI, giúp người dùng thao tác nhập liệu và theo dõi biểu đồ một cách trực quan, mượt mà.
+
+\section{Nghiên cứu công nghệ Trí tuệ Nhân tạo: Kết hợp LLM và Rule-based Engine}
+
+Để loại bỏ nguy cơ ảo giác (Hallucination) khi sử dụng mô hình ngôn ngữ lớn trong nghiệp vụ kế toán kho, đề tài nghiên cứu kiến trúc AI lai (Hybrid AI Engine):
+
+- Phân tích nghiệp vụ bằng dữ liệu số liệu thực chứng: Trích xuất trực tiếp bản ghi JSON Snapshot từ CSDL làm ngữ cảnh bắt buộc (Strict Grounding Context) với nhiệt độ thấp (temperature = 0.2).
+
+- Cơ chế Fallback an toàn: Tích hợp sẵn Rule-based Analysis Engine nội bộ viết bằng Python thuần. Khi mất kết nối API ngoài, hệ thống tự động kích hoạt Rule Engine để tính toán cảnh báo mà không gây gián đoạn dịch vụ.
+
+\section{So sánh kiến trúc Monolithic và 3-Tier Client-Server}
+
+Bảng dưới đây tổng hợp phân tích so sánh giữa hai mô hình kiến trúc phần mềm:
+
+\begin{table}[h!]
+\centering
+\caption{So sánh đặc trưng kiến trúc Monolithic và 3-Tier Client-Server}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{tablehead}
+\textbf{Tiêu chí kỹ thuật} & \textbf{Kiến trúc Monolithic (Nguyên khối)} & \textbf{Kiến trúc 3-Tier Client-Server (Lựa chọn)} \\ \hline
+Tính độc lập các tầng & Giao diện và nghiệp vụ bị ràng buộc chặt chẽ & Phân tách rành mạch: Presentation, Business Logic, Data \\ \hline
+Khả năng mở rộng & Khó mở rộng cục bộ, phải triển khai lại toàn bộ & Mở rộng độc lập từng tầng tùy theo tải người dùng \\ \hline
+Kiểm thử tự động & Khó viết Unit Test cho từng chức năng độc lập & Dễ dàng kiểm thử tự động API bằng Pytest TestClient \\ \hline
+Hỗ trợ đa nền tảng & Chỉ phục vụ trình duyệt Web cụ thể & Phục vụ đồng thời Web, Mobile, hệ thống mã vạch qua REST API \\ \hline
+Tính an toàn dữ liệu & Phụ thuộc vào cấu trúc ứng dụng nguyên khối & CSDL được cô lập hoàn toàn sau tầng dịch vụ bảo mật \\ \hline
+\end{tabular}
+\end{table}
+

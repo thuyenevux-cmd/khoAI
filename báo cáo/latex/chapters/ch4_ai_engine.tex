@@ -1,0 +1,53 @@
+\chapter{THIẾT KẾ VÀ TÍCH HỢP TRÍ TUỆ NHÂN TẠO (AI ENGINE)}
+
+\section{Kiến trúc Pipeline AI 2 lớp (Dual-Layer AI Resilience)}
+Nhằm khắc phục nhược điểm phụ thuộc đường truyền và chi phí API điện toán đám mây, hệ thống triển khai kiến trúc xử lý kép (Hình~\ref{fig:ai_pipeline}):
+\begin{itemize}
+    \item \textbf{Lớp 1 (Cloud LLM):} Gọi Google Gemini API với System Prompt khắt khe và Ground-Truth Context Injection.
+    \item \textbf{Lớp 2 (Local Deterministic Rule Engine):} Tự động kích hoạt khi mất kết nối mạng hoặc thiếu API Key, tính toán trực tiếp số ngày cạn tồn và phát hiện bất thường dựa trên quy tắc toán học xác định.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.92\textwidth]{07_so_do_pipeline_ai_fallback.png}
+    \caption{Sơ đồ Kiến trúc Pipeline AI 2 lớp linh hoạt (Nhóm 11)}
+    \label{fig:ai_pipeline}
+\end{figure}
+
+\section{Mô hình toán học Burn-rate và Phát hiện Bất thường}
+\begin{enumerate}
+    \item \textbf{Tốc độ xuất bình quân ngày (Daily Burn Rate - $V$):}
+    \begin{equation}
+        V = \frac{\sum_{i=1}^{30} \text{QuantityExported}_i}{30}
+    \end{equation}
+    \item \textbf{Số ngày cạn tồn dự kiến (Depletion Days - $D$):}
+    \begin{equation}
+        D = \begin{cases}
+            \frac{\text{CurrentStock}}{V}, & \text{khi } V > 0 \\
+            \infty \text{ (Tồn an toàn)}, & \text{khi } V = 0
+        \end{cases}
+    \end{equation}
+    Quy tắc này loại bỏ hoàn toàn lỗi ZeroDivisionError.
+    \item \textbf{Kiểm định dị biệt Z-score:}
+    \begin{equation}
+        Z = \frac{X - \mu}{\sigma}
+    \end{equation}
+    Khi $|Z| > 2.5$, hệ thống gắn cờ cảnh báo giao dịch bất thường (Hình~\ref{fig:anomaly}).
+\end{enumerate}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{09_so_do_phan_tich_bat_thuong.png}
+    \caption{Lưu đồ thuật toán phát hiện bất thường và tính Depletion Days}
+    \label{fig:anomaly}
+\end{figure}
+
+\section{Trợ lý Hỏi Đáp Kho AI Tự Nhiên (Natural Language Assistant)}
+Hệ thống cung cấp Endpoint \texttt{POST /api/ai/ask} và hộp thoại Chat Console (Hình~\ref{fig:seq_qa}), cho phép thủ kho tra cứu tự nhiên: \textit{"Kho còn bao nhiêu bàn phím cơ AKKO?"}, nhận lại kết quả trực quan dạng thẻ Smart UI.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.92\textwidth]{08_so_do_tuan_tu_hoi_dap_ai.png}
+    \caption{Sơ đồ tuần tự xử lý Trợ lý hỏi đáp tự nhiên NLP}
+    \label{fig:seq_qa}
+\end{figure}

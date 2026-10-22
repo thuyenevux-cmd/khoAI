@@ -1,0 +1,37 @@
+# Environment Variables & Secrets (CRITICAL)
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python & Virtual Environments
+**/__pycache__/
+**/*.py[cod]
+*$py.class
+**/venv/
+**/.venv/
+**/.pytest_cache/
+*.egg-info/
+
+# Databases
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+
+# Node & Frontend Build Artifacts
+**/node_modules/
+**/dist/
+**/.vite/
+npm-debug.log*
+
+# LaTeX Auxiliary Build Files
+**/*.aux
+**/*.log
+**/*.out
+**/*.toc
+**/*.synctex.gz
+**/*.fls
+**/*.fdb_latexmk
+
+# System files
+Thumbs.db
+.DS_Store

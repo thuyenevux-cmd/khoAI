@@ -1,0 +1,19 @@
+\chapter{PHÂN TÍCH YÊU CẦU}
+\label{ch:02}
+
+\section{Yêu cầu chức năng chi tiết (FR01 - FR09)}
+Hệ thống đáp ứng đầy đủ 9 nhóm yêu cầu chức năng cốt lõi:
+\begin{itemize}
+    \item \textbf{FR01 - Xác thực \& RBAC:} Đăng nhập JWT Bearer, phân quyền 3 vai trò.
+    \item \textbf{FR02 - Dữ liệu nền tảng:} Quản lý danh mục, nhà cung cấp, sơ đồ kệ kho.
+    \item \textbf{FR03 - Quản lý Sản phẩm:} Quản lý SKU, giá vốn, giá bán, định mức an toàn.
+    \item \textbf{FR04 - Giao dịch Nhập kho:} Lập phiếu nhập, kiểm đếm thực tế, gán vị trí ô kệ.
+    \item \textbf{FR05 - Giao dịch Xuất kho:} Lập phiếu xuất, kiểm tra tồn khả dụng, khóa an toàn.
+    \item \textbf{FR06 - Dự báo Tồn kho AI:} Tính Burn-rate, Depletion Days và gợi ý tái nhập.
+    \item \textbf{FR07 - Phát hiện Bất thường AI:} Kiểm định thống kê Z-score phát hiện giao dịch lạ.
+    \item \textbf{FR08 - Trợ lý Hỏi Đáp Kho AI:} Hộp thoại NLP hỏi đáp tồn kho bằng tiếng Việt.
+    \item \textbf{FR09 - Nhật ký Kiểm toán:} Ghi vết bất biến mọi thao tác C/U/D trong hệ thống.
+\end{itemize}
+
+\section{Yêu cầu phi chức năng}
+Bảo mật OWASP Top 10, thời gian đáp ứng API $<100$ms, thực thi giao dịch nguyên tử ACID và giao diện SaaS Dark Mode trực quan.

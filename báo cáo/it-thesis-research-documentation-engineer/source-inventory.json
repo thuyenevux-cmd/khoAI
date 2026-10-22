@@ -1,0 +1,1506 @@
+{
+  "root": "D:\\khoAI",
+  "file_count": 248,
+  "summary": {
+    "documentation": 84,
+    "other": 53,
+    "python": 60,
+    "latex": 15,
+    "config": 3,
+    "json": 4,
+    "report": 1,
+    "image": 22,
+    "database": 2,
+    "javascript": 4
+  },
+  "files": [
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/CHANGELOG.md",
+      "kind": "documentation",
+      "size": 891,
+      "sha256": "1b0fa0536e01d381ea021b91b61b107b8ff16488558bd3e870c0f5a6260f7bcf"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/examples/marketing-ai-research-plan.md",
+      "kind": "documentation",
+      "size": 3065,
+      "sha256": "f0c7f17c08a0959ef0fbc2f9c244c8b674f770053ebf4eb3fba1748dfb871106"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/examples/marketing-ai-thesis-case.md",
+      "kind": "documentation",
+      "size": 2724,
+      "sha256": "06f555f187e63dfc0a663330b5de77832b93e89367c6ceedfb552a843e2ed5cd"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/examples/prompts.md",
+      "kind": "documentation",
+      "size": 1864,
+      "sha256": "2c3a6e6bd785f86ee8f9775052f7a2f5f18d22dca6d54411b92100240276ef02"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/LICENSE",
+      "kind": "other",
+      "size": 1056,
+      "sha256": "1126322e2cc8d165adc4c792eeb195717de2bcc7b39be1ce77959d78e87ef685"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/README-VI.md",
+      "kind": "documentation",
+      "size": 2443,
+      "sha256": "dfc31dcf314d8716d1250a3cb55a719d2c58a973615411e92621e72dc350e089"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/ai-system-documentation.md",
+      "kind": "documentation",
+      "size": 1624,
+      "sha256": "063a0e5537225b94855d8d216d474c757db7e3704a11e0d777d6eb1dc5083e0e"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/architecture-documentation.md",
+      "kind": "documentation",
+      "size": 1970,
+      "sha256": "0c54965d99935412bdf3de47a3636e5948374cec716b5922b950764502748733"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/diagram-routing.md",
+      "kind": "documentation",
+      "size": 2683,
+      "sha256": "434da41c6812f5ac9d82f4c97298848cb21cd363a57ec3941196dfba00bb8aa2"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/documentation-information-architecture.md",
+      "kind": "documentation",
+      "size": 3627,
+      "sha256": "c96f9e11764e2d79bbdffee29e3a589619010a5c4fc2abc6ec05ef7054bee7f5"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/evaluation-and-experimentation.md",
+      "kind": "documentation",
+      "size": 2153,
+      "sha256": "796043ec23d0a3a0ba1492b68bd0457ddaa3a159def6ab6bbec37a1e29cabd21"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/evidence-and-claim-discipline.md",
+      "kind": "documentation",
+      "size": 1509,
+      "sha256": "89f77c12780a2744850f69f77fe1001ffcc0707db439a8006169c1b0e199008a"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/full-project-workflow.md",
+      "kind": "documentation",
+      "size": 1867,
+      "sha256": "cf91948586411d514de7f4c2b8f95b9ab23b8a105faf3343898368cdf87817c8"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/latex-print-standard.md",
+      "kind": "documentation",
+      "size": 2295,
+      "sha256": "ca0a386b17aa0712af61fc419841e8a6595cc19fe98b429d4cdb25ce302a51cf"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/notation-rules.md",
+      "kind": "documentation",
+      "size": 3975,
+      "sha256": "755dd6a1144436dfa69bedfeb991ef6dcffa82b3e8f8624fbb2be7d1d6ba5eea"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/project-documentation-package.md",
+      "kind": "documentation",
+      "size": 1994,
+      "sha256": "12747fcf6101a6c4df8dcf1f0533ebd9be847170c270a3c409a96d7785c159aa"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/project-research-protocol.md",
+      "kind": "documentation",
+      "size": 1985,
+      "sha256": "8c56d165601990897d27ceeb0a66cc0d09a85edd91a0cf94896dc09850dd23c0"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/related-work-and-benchmarking.md",
+      "kind": "documentation",
+      "size": 1351,
+      "sha256": "99793ba02569c98296cb72e4ebbd62cb342031505b745474ccfdb702409af4f8"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/requirements-and-traceability.md",
+      "kind": "documentation",
+      "size": 1534,
+      "sha256": "24c8242602fe48b9626038cd9cc25b50785c15f1b2c8e3b3ad628cb5a35c397b"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/research-grade-quality-gates.md",
+      "kind": "documentation",
+      "size": 2494,
+      "sha256": "5e381583f36715be4040a3b6d890d405a32e619cd1a2887daaba6ed3f63922b7"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/security-and-operations.md",
+      "kind": "documentation",
+      "size": 1393,
+      "sha256": "b4454be23d28ab2450d909f98431ad330f08b06ee745488c679f8948a908adb9"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/standards-and-sources.md",
+      "kind": "documentation",
+      "size": 5408,
+      "sha256": "e910139dbe94818a0ece157621758a48967dbd1c923bff16c8ce160795be6f1e"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/thesis-chapter-design.md",
+      "kind": "documentation",
+      "size": 2074,
+      "sha256": "c7c0287235dec8d218cae3448803b75e9277b30f212e3fcd489e4a4e542e81e2"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/tool-selection.md",
+      "kind": "documentation",
+      "size": 2003,
+      "sha256": "2ca6cd3852987452aac054fc826ce0f9f7ca4bb2f8c370f00158fff999a92005"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/references/visual-system.md",
+      "kind": "documentation",
+      "size": 2367,
+      "sha256": "743f7f7629d92cd5a6c516b7a6f2f763a71bf2862872d34f91d35336ca447a6c"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/scripts/audit_latex_project.py",
+      "kind": "python",
+      "size": 6494,
+      "sha256": "dea463a6ed5aa6873e891d94ce1bd8885e4dfaabac08acccc9a03ec00fca327a"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/scripts/audit_pdf.py",
+      "kind": "python",
+      "size": 4848,
+      "sha256": "0c949c84b9626782e9f94b3793c78bcea554595a18ade32ab8e81f8ae83814a3"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/scripts/inventory_project.py",
+      "kind": "python",
+      "size": 1785,
+      "sha256": "c563973b3940a23cf933ac30e4168f0e7dbb666afc76d0dc17f69fc59696288c"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/scripts/validate_research_pack.py",
+      "kind": "python",
+      "size": 1176,
+      "sha256": "cc8d9866dee94a769fc1109ac55daa46f565e1e79dd70ab2e39103fdcc2395d7"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/scripts/validate_skill_package.py",
+      "kind": "python",
+      "size": 2448,
+      "sha256": "fb229c7fca962c8212ba098af7c7a6d6b62f21f1796082ecb4d18fa92f57ccb1"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/scripts/validate_traceability.py",
+      "kind": "python",
+      "size": 1955,
+      "sha256": "e97a6fd31ea286e57c6cf208745055ecf22e7a5f9c19f66a3ad9822f3f4ebf0e"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/scripts/validate_visual_manifest.py",
+      "kind": "python",
+      "size": 5509,
+      "sha256": "580abe752f9949edf0ec47b7050ed5fef9af1382bf6352b242ce4503b09c8753"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/SKILL.md",
+      "kind": "documentation",
+      "size": 26272,
+      "sha256": "6d0090c42fe133021721230cbd5d96012ce74f71933d63ad04e41ac872d823bb"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/adr-template.md",
+      "kind": "documentation",
+      "size": 490,
+      "sha256": "0b10aae241d066c473a7383d4d5b106b7447da6b70fb212bb0be1b8212a16a04"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/design-doc-outline.md",
+      "kind": "documentation",
+      "size": 573,
+      "sha256": "1a93276effb18ee80d05a0ce8644515ed9a87d1f0827857a0a8a7bc66069d9fb"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/evaluation-plan.md",
+      "kind": "documentation",
+      "size": 447,
+      "sha256": "aca9ec822a0b941748dddc5dd588571693ed1462b93a8f9d5892878a0f803de3"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/evidence-ledger.csv",
+      "kind": "other",
+      "size": 101,
+      "sha256": "e2e466b421df1b8c600edc26d71188ed34d9706ce758af2a46045717f0c54bd5"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/figure-wrapper.tex",
+      "kind": "latex",
+      "size": 275,
+      "sha256": "763807abaa77bf3b61958bbd734606eedc1c468b78d58b6cdf0743f4113a1a6e"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/pgfplots-line.tex",
+      "kind": "latex",
+      "size": 630,
+      "sha256": "674058df5f2376e3c54e3626416ffd23bf3582fcde19e3fea3d8eecf0eaa7eae"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/project-research-plan.md",
+      "kind": "documentation",
+      "size": 780,
+      "sha256": "c908e80716fb46a7703ec702090c924537376596a77b7f5077ab9871f041e0d7"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/quality-attribute-scenarios.csv",
+      "kind": "other",
+      "size": 112,
+      "sha256": "87a66be16b120bf3ce67402d5eac96864d99a8525c0ab86ad02b78b5c6c22c14"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/related-work-matrix.csv",
+      "kind": "other",
+      "size": 170,
+      "sha256": "82c8f32cdf5e33cf6349bab5ac3d21db0603977cfff35b88f6aeb21e487b3636"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/repo-readme-outline.md",
+      "kind": "documentation",
+      "size": 426,
+      "sha256": "03a3d7d83a3b44818c5e612800203c30d2dcbe730856de595dbe30b0553886e0"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/reproducibility-manifest.yaml",
+      "kind": "config",
+      "size": 449,
+      "sha256": "06875357f3e8a982e4badee8561fc685182c17343f3a6a32229c62042cb3e2db"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/requirements-traceability.csv",
+      "kind": "other",
+      "size": 153,
+      "sha256": "47c0b186203392d875645c4ddcc18ba25a8ef0746058139ee240313e0b7d51b8"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/research-questions.md",
+      "kind": "documentation",
+      "size": 228,
+      "sha256": "c616fa1b290420ca697a22ee57abcc4960644bacb2b2320719c5bd5b470a4a7f"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/sequence-plantuml.puml",
+      "kind": "other",
+      "size": 1032,
+      "sha256": "f82118b96d13ed08e604865ca6cee90e449e0ac651e02a2d2605d60832575d62"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/source-inventory.csv",
+      "kind": "other",
+      "size": 93,
+      "sha256": "e21e9be47b57a9a081b42d8db52eaad5df77fe9d02412f56fcce75c721870fbb"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/table-booktabs.tex",
+      "kind": "latex",
+      "size": 361,
+      "sha256": "6b1c5ffbe0b4c294af0cd5fb03bbca878e59daf4fa79af6604c124cd3878a3ba"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/test-report.md",
+      "kind": "documentation",
+      "size": 429,
+      "sha256": "9b4d5dbb55af4ae1f18f95b8f322dcffe777f426aa3f468fb649901265d89e42"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/tikz-architecture.tex",
+      "kind": "latex",
+      "size": 1208,
+      "sha256": "f5d86146bd0e2c694cd4059a1d830872e3fcbfa1d6a2cc028aad93efa8a7bde1"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/visual-coverage-map.csv",
+      "kind": "other",
+      "size": 317,
+      "sha256": "1c230d1f5fab20c7a300e8bff3b624c3c6da5f5e7c9defc5f9c01adcab05decf"
+    },
+    {
+      "path": ".agent/skills/it-thesis-research-documentation-engineer/templates/visual-manifest.example.json",
+      "kind": "json",
+      "size": 1113,
+      "sha256": "6ce7640383cdd9fa072602e7d2225a9f8d9401f80a79898d893b97f8ef10212e"
+    },
+    {
+      "path": "báo cáo/AIA331_QuanLyKho_AI_Full_Portfolio.zip",
+      "kind": "other",
+      "size": 871413,
+      "sha256": "bb0d5b915aece07e413abb116b2a478b51f429b3a12a132b6d1a63fa73208890"
+    },
+    {
+      "path": "báo cáo/build_latex_suite.py",
+      "kind": "python",
+      "size": 19242,
+      "sha256": "d22d1800ca9d1ebba0bc310ba05b3a9ad462555a4b3f0e25665f50c52b8ed968"
+    },
+    {
+      "path": "báo cáo/build_word_report.py",
+      "kind": "python",
+      "size": 60245,
+      "sha256": "511f4b8f8e4e932a5f27cf95ac7953e78f4bbd25ec22d123f6533a420faf74b3"
+    },
+    {
+      "path": "báo cáo/báo cáo dự án Kho AI nhóm 11.docx",
+      "kind": "report",
+      "size": 1278174,
+      "sha256": "5b9d6c0ef84686f1dfe9b38387f07b9750b3c2f3795a286ca85aba6b0f98776f"
+    },
+    {
+      "path": "báo cáo/báo cáo dự án Kho AI nhóm 11_FULL_PACKAGE.zip",
+      "kind": "other",
+      "size": 3739904,
+      "sha256": "55e03c931a46931dc10839ad4ff78d47b2b79c1a71316f9176f25840c5b0220e"
+    },
+    {
+      "path": "báo cáo/báo cáo dự án Kho AI nhóm 11_LaTeX_Source.zip",
+      "kind": "other",
+      "size": 153502,
+      "sha256": "3da79d46b9aa27eff5eb9f79101883dac52f27a3ecdf88494b08f9f125a24d9d"
+    },
+    {
+      "path": "báo cáo/diagrams/01_so_do_kien_truc_he_thong.png",
+      "kind": "image",
+      "size": 110283,
+      "sha256": "7d4689894ec443b3f4bf3ad20a75d03b2332d6719019e3c11fa527c2ffca1bad"
+    },
+    {
+      "path": "báo cáo/diagrams/02_so_do_usecase_tong_the.png",
+      "kind": "image",
+      "size": 89425,
+      "sha256": "2e9cc5425805b0d2f62f9ec5e74fc628edbe842da9e1c3fc1863d0a70679f084"
+    },
+    {
+      "path": "báo cáo/diagrams/03_so_do_erd_11_bang.png",
+      "kind": "image",
+      "size": 158583,
+      "sha256": "262efae5aabf3441d3f6a43b381de14fe717c060b1510aba3c64d09dc96c2ccb"
+    },
+    {
+      "path": "báo cáo/diagrams/04_luoc_do_hoat_dong_nhap_kho.png",
+      "kind": "image",
+      "size": 61619,
+      "sha256": "42d621df3cac71eb0a067ee96233ba2d5c84f5078c37c4b7588d47577d02b500"
+    },
+    {
+      "path": "báo cáo/diagrams/05_luoc_do_hoat_dong_xuat_kho.png",
+      "kind": "image",
+      "size": 59299,
+      "sha256": "04dcc3869f8bbda318646f2bce099f8acf3077e7859345e4020a22080b30e18e"
+    },
+    {
+      "path": "báo cáo/diagrams/06_so_do_tuan_tu_nhap_xuat.png",
+      "kind": "image",
+      "size": 66014,
+      "sha256": "780c93fa890b1ae8a302182785c6a188562048a33524e2db5483e8c2e33d36fb"
+    },
+    {
+      "path": "báo cáo/diagrams/07_so_do_pipeline_ai_fallback.png",
+      "kind": "image",
+      "size": 86845,
+      "sha256": "a01782029ef4b150e9934173a22128d875ba95d7d001b614462cd7ed05691d55"
+    },
+    {
+      "path": "báo cáo/diagrams/08_so_do_tuan_tu_hoi_dap_ai.png",
+      "kind": "image",
+      "size": 65814,
+      "sha256": "e8838779a1fe00b1cd92e632eaa04dc40eff783839ccf99df886886a948ef212"
+    },
+    {
+      "path": "báo cáo/diagrams/09_so_do_phan_tich_bat_thuong.png",
+      "kind": "image",
+      "size": 63536,
+      "sha256": "3d8712a8f83fc0aa592a7944fc33c2f131c3febd66f4e25aaed6a5e8cf35be6e"
+    },
+    {
+      "path": "báo cáo/diagrams/10_so_do_sitemap_giao_dien.png",
+      "kind": "image",
+      "size": 58745,
+      "sha256": "eb74a6781a0b1b9c3ddee3da127ddc4c92136e2d31c1b829f382b93f9c760a4b"
+    },
+    {
+      "path": "báo cáo/diagrams/drawio/01_so_do_kien_truc_he_thong.drawio",
+      "kind": "other",
+      "size": 7390,
+      "sha256": "e798f42d82da0dd857a400503e4c94b2e08682aa93e07e64da1f21a3476e6852"
+    },
+    {
+      "path": "báo cáo/diagrams/drawio/02_so_do_usecase_tong_the.drawio",
+      "kind": "other",
+      "size": 7106,
+      "sha256": "74e371d2c50dc526fb894ed77ff94b43f3aafcb759698b82efcc398bcd0c0c36"
+    },
+    {
+      "path": "báo cáo/diagrams/drawio/07_so_do_pipeline_ai_fallback.drawio",
+      "kind": "other",
+      "size": 4341,
+      "sha256": "39b06e7b750c046e2f51328b12fe10595ce21916004d738cd4e7604870345c43"
+    },
+    {
+      "path": "báo cáo/diagrams/logo_ictu.png",
+      "kind": "image",
+      "size": 465917,
+      "sha256": "6b50a4ff65c0a0ffb4f9234ece2697c9c0afcf1cd62ce9be42777994e381802d"
+    },
+    {
+      "path": "báo cáo/generate_diagrams.py",
+      "kind": "python",
+      "size": 39893,
+      "sha256": "f9794cac63487ec4c7a1bf3d6279fb5b3ae0d7c1ad36efbfd3d67b1863fb7cf5"
+    },
+    {
+      "path": "báo cáo/generate_drawio.py",
+      "kind": "python",
+      "size": 18641,
+      "sha256": "60b811a9113d4fb545b292cf45772004722772981d4b42c82a36f4b539a185f8"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/CHANGELOG.md",
+      "kind": "documentation",
+      "size": 891,
+      "sha256": "1b0fa0536e01d381ea021b91b61b107b8ff16488558bd3e870c0f5a6260f7bcf"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/examples/marketing-ai-research-plan.md",
+      "kind": "documentation",
+      "size": 3065,
+      "sha256": "f0c7f17c08a0959ef0fbc2f9c244c8b674f770053ebf4eb3fba1748dfb871106"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/examples/marketing-ai-thesis-case.md",
+      "kind": "documentation",
+      "size": 2724,
+      "sha256": "06f555f187e63dfc0a663330b5de77832b93e89367c6ceedfb552a843e2ed5cd"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/examples/prompts.md",
+      "kind": "documentation",
+      "size": 1864,
+      "sha256": "2c3a6e6bd785f86ee8f9775052f7a2f5f18d22dca6d54411b92100240276ef02"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/LICENSE",
+      "kind": "other",
+      "size": 1056,
+      "sha256": "1126322e2cc8d165adc4c792eeb195717de2bcc7b39be1ce77959d78e87ef685"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/README-VI.md",
+      "kind": "documentation",
+      "size": 2443,
+      "sha256": "dfc31dcf314d8716d1250a3cb55a719d2c58a973615411e92621e72dc350e089"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/ai-system-documentation.md",
+      "kind": "documentation",
+      "size": 1624,
+      "sha256": "063a0e5537225b94855d8d216d474c757db7e3704a11e0d777d6eb1dc5083e0e"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/architecture-documentation.md",
+      "kind": "documentation",
+      "size": 1970,
+      "sha256": "0c54965d99935412bdf3de47a3636e5948374cec716b5922b950764502748733"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/diagram-routing.md",
+      "kind": "documentation",
+      "size": 2683,
+      "sha256": "434da41c6812f5ac9d82f4c97298848cb21cd363a57ec3941196dfba00bb8aa2"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/documentation-information-architecture.md",
+      "kind": "documentation",
+      "size": 3627,
+      "sha256": "c96f9e11764e2d79bbdffee29e3a589619010a5c4fc2abc6ec05ef7054bee7f5"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/evaluation-and-experimentation.md",
+      "kind": "documentation",
+      "size": 2153,
+      "sha256": "796043ec23d0a3a0ba1492b68bd0457ddaa3a159def6ab6bbec37a1e29cabd21"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/evidence-and-claim-discipline.md",
+      "kind": "documentation",
+      "size": 1509,
+      "sha256": "89f77c12780a2744850f69f77fe1001ffcc0707db439a8006169c1b0e199008a"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/full-project-workflow.md",
+      "kind": "documentation",
+      "size": 1867,
+      "sha256": "cf91948586411d514de7f4c2b8f95b9ab23b8a105faf3343898368cdf87817c8"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/latex-print-standard.md",
+      "kind": "documentation",
+      "size": 2295,
+      "sha256": "ca0a386b17aa0712af61fc419841e8a6595cc19fe98b429d4cdb25ce302a51cf"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/notation-rules.md",
+      "kind": "documentation",
+      "size": 3975,
+      "sha256": "755dd6a1144436dfa69bedfeb991ef6dcffa82b3e8f8624fbb2be7d1d6ba5eea"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/project-documentation-package.md",
+      "kind": "documentation",
+      "size": 1994,
+      "sha256": "12747fcf6101a6c4df8dcf1f0533ebd9be847170c270a3c409a96d7785c159aa"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/project-research-protocol.md",
+      "kind": "documentation",
+      "size": 1985,
+      "sha256": "8c56d165601990897d27ceeb0a66cc0d09a85edd91a0cf94896dc09850dd23c0"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/related-work-and-benchmarking.md",
+      "kind": "documentation",
+      "size": 1351,
+      "sha256": "99793ba02569c98296cb72e4ebbd62cb342031505b745474ccfdb702409af4f8"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/requirements-and-traceability.md",
+      "kind": "documentation",
+      "size": 1534,
+      "sha256": "24c8242602fe48b9626038cd9cc25b50785c15f1b2c8e3b3ad628cb5a35c397b"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/research-grade-quality-gates.md",
+      "kind": "documentation",
+      "size": 2494,
+      "sha256": "5e381583f36715be4040a3b6d890d405a32e619cd1a2887daaba6ed3f63922b7"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/security-and-operations.md",
+      "kind": "documentation",
+      "size": 1393,
+      "sha256": "b4454be23d28ab2450d909f98431ad330f08b06ee745488c679f8948a908adb9"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/standards-and-sources.md",
+      "kind": "documentation",
+      "size": 5408,
+      "sha256": "e910139dbe94818a0ece157621758a48967dbd1c923bff16c8ce160795be6f1e"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/thesis-chapter-design.md",
+      "kind": "documentation",
+      "size": 2074,
+      "sha256": "c7c0287235dec8d218cae3448803b75e9277b30f212e3fcd489e4a4e542e81e2"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/tool-selection.md",
+      "kind": "documentation",
+      "size": 2003,
+      "sha256": "2ca6cd3852987452aac054fc826ce0f9f7ca4bb2f8c370f00158fff999a92005"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/references/visual-system.md",
+      "kind": "documentation",
+      "size": 2367,
+      "sha256": "743f7f7629d92cd5a6c516b7a6f2f763a71bf2862872d34f91d35336ca447a6c"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/scripts/audit_latex_project.py",
+      "kind": "python",
+      "size": 6494,
+      "sha256": "dea463a6ed5aa6873e891d94ce1bd8885e4dfaabac08acccc9a03ec00fca327a"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/scripts/audit_pdf.py",
+      "kind": "python",
+      "size": 4848,
+      "sha256": "0c949c84b9626782e9f94b3793c78bcea554595a18ade32ab8e81f8ae83814a3"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/scripts/inventory_project.py",
+      "kind": "python",
+      "size": 1785,
+      "sha256": "c563973b3940a23cf933ac30e4168f0e7dbb666afc76d0dc17f69fc59696288c"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/scripts/validate_research_pack.py",
+      "kind": "python",
+      "size": 1176,
+      "sha256": "cc8d9866dee94a769fc1109ac55daa46f565e1e79dd70ab2e39103fdcc2395d7"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/scripts/validate_skill_package.py",
+      "kind": "python",
+      "size": 2448,
+      "sha256": "fb229c7fca962c8212ba098af7c7a6d6b62f21f1796082ecb4d18fa92f57ccb1"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/scripts/validate_traceability.py",
+      "kind": "python",
+      "size": 1955,
+      "sha256": "e97a6fd31ea286e57c6cf208745055ecf22e7a5f9c19f66a3ad9822f3f4ebf0e"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/scripts/validate_visual_manifest.py",
+      "kind": "python",
+      "size": 5509,
+      "sha256": "580abe752f9949edf0ec47b7050ed5fef9af1382bf6352b242ce4503b09c8753"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/SKILL.md",
+      "kind": "documentation",
+      "size": 26272,
+      "sha256": "6d0090c42fe133021721230cbd5d96012ce74f71933d63ad04e41ac872d823bb"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/adr-template.md",
+      "kind": "documentation",
+      "size": 490,
+      "sha256": "0b10aae241d066c473a7383d4d5b106b7447da6b70fb212bb0be1b8212a16a04"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/design-doc-outline.md",
+      "kind": "documentation",
+      "size": 573,
+      "sha256": "1a93276effb18ee80d05a0ce8644515ed9a87d1f0827857a0a8a7bc66069d9fb"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/evaluation-plan.md",
+      "kind": "documentation",
+      "size": 447,
+      "sha256": "aca9ec822a0b941748dddc5dd588571693ed1462b93a8f9d5892878a0f803de3"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/evidence-ledger.csv",
+      "kind": "other",
+      "size": 101,
+      "sha256": "e2e466b421df1b8c600edc26d71188ed34d9706ce758af2a46045717f0c54bd5"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/figure-wrapper.tex",
+      "kind": "latex",
+      "size": 275,
+      "sha256": "763807abaa77bf3b61958bbd734606eedc1c468b78d58b6cdf0743f4113a1a6e"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/pgfplots-line.tex",
+      "kind": "latex",
+      "size": 630,
+      "sha256": "674058df5f2376e3c54e3626416ffd23bf3582fcde19e3fea3d8eecf0eaa7eae"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/project-research-plan.md",
+      "kind": "documentation",
+      "size": 780,
+      "sha256": "c908e80716fb46a7703ec702090c924537376596a77b7f5077ab9871f041e0d7"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/quality-attribute-scenarios.csv",
+      "kind": "other",
+      "size": 112,
+      "sha256": "87a66be16b120bf3ce67402d5eac96864d99a8525c0ab86ad02b78b5c6c22c14"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/related-work-matrix.csv",
+      "kind": "other",
+      "size": 170,
+      "sha256": "82c8f32cdf5e33cf6349bab5ac3d21db0603977cfff35b88f6aeb21e487b3636"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/repo-readme-outline.md",
+      "kind": "documentation",
+      "size": 426,
+      "sha256": "03a3d7d83a3b44818c5e612800203c30d2dcbe730856de595dbe30b0553886e0"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/reproducibility-manifest.yaml",
+      "kind": "config",
+      "size": 449,
+      "sha256": "06875357f3e8a982e4badee8561fc685182c17343f3a6a32229c62042cb3e2db"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/requirements-traceability.csv",
+      "kind": "other",
+      "size": 153,
+      "sha256": "47c0b186203392d875645c4ddcc18ba25a8ef0746058139ee240313e0b7d51b8"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/research-questions.md",
+      "kind": "documentation",
+      "size": 228,
+      "sha256": "c616fa1b290420ca697a22ee57abcc4960644bacb2b2320719c5bd5b470a4a7f"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/sequence-plantuml.puml",
+      "kind": "other",
+      "size": 1032,
+      "sha256": "f82118b96d13ed08e604865ca6cee90e449e0ac651e02a2d2605d60832575d62"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/source-inventory.csv",
+      "kind": "other",
+      "size": 93,
+      "sha256": "e21e9be47b57a9a081b42d8db52eaad5df77fe9d02412f56fcce75c721870fbb"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/table-booktabs.tex",
+      "kind": "latex",
+      "size": 361,
+      "sha256": "6b1c5ffbe0b4c294af0cd5fb03bbca878e59daf4fa79af6604c124cd3878a3ba"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/test-report.md",
+      "kind": "documentation",
+      "size": 429,
+      "sha256": "9b4d5dbb55af4ae1f18f95b8f322dcffe777f426aa3f468fb649901265d89e42"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/tikz-architecture.tex",
+      "kind": "latex",
+      "size": 1208,
+      "sha256": "f5d86146bd0e2c694cd4059a1d830872e3fcbfa1d6a2cc028aad93efa8a7bde1"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/visual-coverage-map.csv",
+      "kind": "other",
+      "size": 317,
+      "sha256": "1c230d1f5fab20c7a300e8bff3b624c3c6da5f5e7c9defc5f9c01adcab05decf"
+    },
+    {
+      "path": "báo cáo/it-thesis-research-documentation-engineer/templates/visual-manifest.example.json",
+      "kind": "json",
+      "size": 1113,
+      "sha256": "6ce7640383cdd9fa072602e7d2225a9f8d9401f80a79898d893b97f8ef10212e"
+    },
+    {
+      "path": "báo cáo/latex/chapters/ch1_tong_quan.tex",
+      "kind": "latex",
+      "size": 1754,
+      "sha256": "2fdf15dadfa1dbc814ab3c70520b29cd65ee6c5fb27a42bdb743e459e1a3aaab"
+    },
+    {
+      "path": "báo cáo/latex/chapters/ch2_yeu_cau.tex",
+      "kind": "latex",
+      "size": 2268,
+      "sha256": "de0a1ea80c5411e2f3d21aa5ecd32e0d68735592f81fc2330a3bbc6506ca36df"
+    },
+    {
+      "path": "báo cáo/latex/chapters/ch3_thiet_ke.tex",
+      "kind": "latex",
+      "size": 2363,
+      "sha256": "6876b283c6a227a28604408854ac00a9031ec491f589c13a899e2d7d39760aa7"
+    },
+    {
+      "path": "báo cáo/latex/chapters/ch4_ai_engine.tex",
+      "kind": "latex",
+      "size": 2795,
+      "sha256": "b43fef3738c647fcf50b1422fba3ea3b6e99428339b7975b1e8bdbc2fde0fd1f"
+    },
+    {
+      "path": "báo cáo/latex/chapters/ch5_hien_thuc.tex",
+      "kind": "latex",
+      "size": 2333,
+      "sha256": "2fbb2392699d6118b8d519b3cd2602341225de218fed633a74693e510a24051f"
+    },
+    {
+      "path": "báo cáo/latex/chapters/ch6_rubric_van_hanh.tex",
+      "kind": "latex",
+      "size": 2062,
+      "sha256": "c074702912187535c669c93fbc075fa2e7e43ab1df7e90101521dd3f41abea7b"
+    },
+    {
+      "path": "báo cáo/latex/images/01_so_do_kien_truc_he_thong.png",
+      "kind": "image",
+      "size": 110283,
+      "sha256": "7d4689894ec443b3f4bf3ad20a75d03b2332d6719019e3c11fa527c2ffca1bad"
+    },
+    {
+      "path": "báo cáo/latex/images/02_so_do_usecase_tong_the.png",
+      "kind": "image",
+      "size": 89425,
+      "sha256": "2e9cc5425805b0d2f62f9ec5e74fc628edbe842da9e1c3fc1863d0a70679f084"
+    },
+    {
+      "path": "báo cáo/latex/images/03_so_do_erd_11_bang.png",
+      "kind": "image",
+      "size": 158583,
+      "sha256": "262efae5aabf3441d3f6a43b381de14fe717c060b1510aba3c64d09dc96c2ccb"
+    },
+    {
+      "path": "báo cáo/latex/images/04_luoc_do_hoat_dong_nhap_kho.png",
+      "kind": "image",
+      "size": 61619,
+      "sha256": "42d621df3cac71eb0a067ee96233ba2d5c84f5078c37c4b7588d47577d02b500"
+    },
+    {
+      "path": "báo cáo/latex/images/05_luoc_do_hoat_dong_xuat_kho.png",
+      "kind": "image",
+      "size": 59299,
+      "sha256": "04dcc3869f8bbda318646f2bce099f8acf3077e7859345e4020a22080b30e18e"
+    },
+    {
+      "path": "báo cáo/latex/images/06_so_do_tuan_tu_nhap_xuat.png",
+      "kind": "image",
+      "size": 66014,
+      "sha256": "780c93fa890b1ae8a302182785c6a188562048a33524e2db5483e8c2e33d36fb"
+    },
+    {
+      "path": "báo cáo/latex/images/07_so_do_pipeline_ai_fallback.png",
+      "kind": "image",
+      "size": 86845,
+      "sha256": "a01782029ef4b150e9934173a22128d875ba95d7d001b614462cd7ed05691d55"
+    },
+    {
+      "path": "báo cáo/latex/images/08_so_do_tuan_tu_hoi_dap_ai.png",
+      "kind": "image",
+      "size": 65814,
+      "sha256": "e8838779a1fe00b1cd92e632eaa04dc40eff783839ccf99df886886a948ef212"
+    },
+    {
+      "path": "báo cáo/latex/images/09_so_do_phan_tich_bat_thuong.png",
+      "kind": "image",
+      "size": 63536,
+      "sha256": "3d8712a8f83fc0aa592a7944fc33c2f131c3febd66f4e25aaed6a5e8cf35be6e"
+    },
+    {
+      "path": "báo cáo/latex/images/10_so_do_sitemap_giao_dien.png",
+      "kind": "image",
+      "size": 58745,
+      "sha256": "eb74a6781a0b1b9c3ddee3da127ddc4c92136e2d31c1b829f382b93f9c760a4b"
+    },
+    {
+      "path": "báo cáo/latex/images/logo_ictu.png",
+      "kind": "image",
+      "size": 465917,
+      "sha256": "6b50a4ff65c0a0ffb4f9234ece2697c9c0afcf1cd62ce9be42777994e381802d"
+    },
+    {
+      "path": "báo cáo/latex/main.tex",
+      "kind": "latex",
+      "size": 4392,
+      "sha256": "7a2a37f2e5b263363c0784ac12c2fc6c186ecc4cde6d823fc24e2f1147c75b70"
+    },
+    {
+      "path": "báo cáo/RUBRIC_CHECKLIST_NHOM11.md",
+      "kind": "documentation",
+      "size": 6529,
+      "sha256": "f9bb1f87325c08172814369f59e3f88603dc18a4e542ee6d7f21501addd7fe50"
+    },
+    {
+      "path": "thực hành/backend/.env",
+      "kind": "other",
+      "size": 253,
+      "sha256": "963effb04991716e2af5b2c78c3819fd44bb17992cb695aa2c094caee03a9aaf"
+    },
+    {
+      "path": "thực hành/backend/.env.example",
+      "kind": "other",
+      "size": 332,
+      "sha256": "854b7bceea6aadf40fea2ded4c90df9463dd77dc248fff5b19967b482e05aa3c"
+    },
+    {
+      "path": "thực hành/backend/.gitignore",
+      "kind": "other",
+      "size": 37,
+      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
+    },
+    {
+      "path": "thực hành/backend/.pytest_cache/CACHEDIR.TAG",
+      "kind": "other",
+      "size": 191,
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
+    },
+    {
+      "path": "thực hành/backend/.pytest_cache/README.md",
+      "kind": "documentation",
+      "size": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    {
+      "path": "thực hành/backend/.pytest_cache/v/cache/lastfailed",
+      "kind": "other",
+      "size": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "thực hành/backend/.pytest_cache/v/cache/nodeids",
+      "kind": "other",
+      "size": 688,
+      "sha256": "8f4735fbfa0efed335de3aec82ccc1172e99b357ab555f564a0ec8803b42c325"
+    },
+    {
+      "path": "thực hành/backend/app/core/config.py",
+      "kind": "python",
+      "size": 548,
+      "sha256": "e0e8018f0fe6de3bb12c3392a29bc1f0eab093b474783f1c1e04e20a5cbc195a"
+    },
+    {
+      "path": "thực hành/backend/app/core/database.py",
+      "kind": "python",
+      "size": 556,
+      "sha256": "19cb21fc21e7482dd10722e74190a9e5c7aa402fa10c59057b1923efe77b63e7"
+    },
+    {
+      "path": "thực hành/backend/app/core/security.py",
+      "kind": "python",
+      "size": 1314,
+      "sha256": "b4e447b81f8c9913fb78819bb1c1a3bb0a345ba353b8fc3973f0ce4b311fe3c4"
+    },
+    {
+      "path": "thực hành/backend/app/db/seed.py",
+      "kind": "python",
+      "size": 7643,
+      "sha256": "ca85fd443f02384beeccf48caffe440c759375e586fc3d1b22b12f4413fda3d0"
+    },
+    {
+      "path": "thực hành/backend/app/main.py",
+      "kind": "python",
+      "size": 1635,
+      "sha256": "b75732755fc099dd42f0af89d99c488a3a5f91129ab408239251ab61aa54c224"
+    },
+    {
+      "path": "thực hành/backend/app/models/__init__.py",
+      "kind": "python",
+      "size": 604,
+      "sha256": "00b32973ab4467ee0fb7eb2ffd4ed078597bd3be8eaac93f1ebad5b170a6aad3"
+    },
+    {
+      "path": "thực hành/backend/app/models/category.py",
+      "kind": "python",
+      "size": 472,
+      "sha256": "bfbd51a72a7432f6617813422a9ca49ac4dea806849f629ede81864ee986e677"
+    },
+    {
+      "path": "thực hành/backend/app/models/inventory.py",
+      "kind": "python",
+      "size": 639,
+      "sha256": "fe93ba7789ddd9c30216bb812f29843206f87808de1b3a40686a93d9fda447cc"
+    },
+    {
+      "path": "thực hành/backend/app/models/product.py",
+      "kind": "python",
+      "size": 1438,
+      "sha256": "b8860c5c046279ea4e1b2566ac86fd72bc0b4ad05083bf17312e43bcdee73288"
+    },
+    {
+      "path": "thực hành/backend/app/models/receipt.py",
+      "kind": "python",
+      "size": 2676,
+      "sha256": "17d19eac49eed9b0e22d6dade744fa7ae2f4007cbaa532326dc22b4ccc5b1d43"
+    },
+    {
+      "path": "thực hành/backend/app/models/stock_movement.py",
+      "kind": "python",
+      "size": 916,
+      "sha256": "8615aaf895e8aae9682380bf700ce0140b0fe29c2030b874920fe86f4db9c039"
+    },
+    {
+      "path": "thực hành/backend/app/models/supplier.py",
+      "kind": "python",
+      "size": 741,
+      "sha256": "95c071d6ae8f0cfe5bd2bccf0c857e4c9a2711b2586fde7384f03a8a13820d6f"
+    },
+    {
+      "path": "thực hành/backend/app/models/unit.py",
+      "kind": "python",
+      "size": 405,
+      "sha256": "7e7b75e433855e4d39a5e049ce36e40c70d95de8c85c78bd283b6e729bb0b341"
+    },
+    {
+      "path": "thực hành/backend/app/models/user.py",
+      "kind": "python",
+      "size": 666,
+      "sha256": "54f0be9ccad140c8740e53587329adfcc7645057d22ad1460147e86316a77486"
+    },
+    {
+      "path": "thực hành/backend/app/prompts/anomaly_detection.txt",
+      "kind": "other",
+      "size": 856,
+      "sha256": "f90f8c0d9962678a8897cbd3c24ee9407259043993b8dc291e06c048fb080e53"
+    },
+    {
+      "path": "thực hành/backend/app/prompts/inventory_report.txt",
+      "kind": "other",
+      "size": 1178,
+      "sha256": "c1e79a8014c05731e043e8c96d888c0fc076eb6a594f6b518d98653ded1759b7"
+    },
+    {
+      "path": "thực hành/backend/app/prompts/stock_recommendation.txt",
+      "kind": "other",
+      "size": 1131,
+      "sha256": "e2cc07ab14f93718f7eb592cd75924a1c35d6cdff9bca4d23f3e0cfc15c5b39f"
+    },
+    {
+      "path": "thực hành/backend/app/routers/ai.py",
+      "kind": "python",
+      "size": 8607,
+      "sha256": "a767a001fa98ee559fa0a790a60a6f34e5f4e5bbcb18b71711a5c7c57920ef42"
+    },
+    {
+      "path": "thực hành/backend/app/routers/auth.py",
+      "kind": "python",
+      "size": 3316,
+      "sha256": "76538ca12c9d80632ef45a6e3d40d5aa6e4dd4eaa68080e5db402081ceedada4"
+    },
+    {
+      "path": "thực hành/backend/app/routers/categories.py",
+      "kind": "python",
+      "size": 2626,
+      "sha256": "2d2997d99e6dcef9b9aeb863ca3398bef111d385683833f63c9241d61fe53427"
+    },
+    {
+      "path": "thực hành/backend/app/routers/dashboard.py",
+      "kind": "python",
+      "size": 4122,
+      "sha256": "c2a1a000764637c1d42b432d5bf274ab7df0aeed61f512f050cbd59e73cd7de5"
+    },
+    {
+      "path": "thực hành/backend/app/routers/deps.py",
+      "kind": "python",
+      "size": 1877,
+      "sha256": "e1d1c9ed4e80378f09d2d8e41e5a8e7e6c749d759cef42bf356f2ee78b1ad279"
+    },
+    {
+      "path": "thực hành/backend/app/routers/exports.py",
+      "kind": "python",
+      "size": 6049,
+      "sha256": "4166ee65642136965b931270cf80ff6c845c278e06a2d9a37d40c2e5faa5b4c6"
+    },
+    {
+      "path": "thực hành/backend/app/routers/imports.py",
+      "kind": "python",
+      "size": 5948,
+      "sha256": "a65c751759438a8ddb78e76073418b505ef44d7ef949bddda12b89bee7d1bb81"
+    },
+    {
+      "path": "thực hành/backend/app/routers/inventory.py",
+      "kind": "python",
+      "size": 3689,
+      "sha256": "e9c2f19d73e4727effb7d40c284f6e23a38ecb56678c083ce36f6ddc5b7f72b4"
+    },
+    {
+      "path": "thực hành/backend/app/routers/products.py",
+      "kind": "python",
+      "size": 4579,
+      "sha256": "01f5c49518ee47e766a64565ba4e8403c6240683096b6896001243b30b87e4de"
+    },
+    {
+      "path": "thực hành/backend/app/routers/reports.py",
+      "kind": "python",
+      "size": 4406,
+      "sha256": "9a79571777c4d99cbff9a33c5ec52366ba067a6d27d4720107f2a670e1be7f72"
+    },
+    {
+      "path": "thực hành/backend/app/routers/stock_movements.py",
+      "kind": "python",
+      "size": 2124,
+      "sha256": "fdf5ec53578c0ff9b1b2a80bc22b64e3b9e9f9fdeaf0829b84d28846d6b79b67"
+    },
+    {
+      "path": "thực hành/backend/app/routers/suppliers.py",
+      "kind": "python",
+      "size": 2632,
+      "sha256": "5c1ec6b5862e81f82b3f148208f94d015f3dd8de8d1f5aee4e9c6b45b6c53a22"
+    },
+    {
+      "path": "thực hành/backend/app/routers/units.py",
+      "kind": "python",
+      "size": 1774,
+      "sha256": "cd109710ae2d63369c94099cb6fe47d79d484144293948c5242d9ba51666e525"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/__init__.py",
+      "kind": "python",
+      "size": 1243,
+      "sha256": "6c937841548454d8c50e1a62d3df455ee056efa2230a449d64eec0200c89b5dd"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/ai.py",
+      "kind": "python",
+      "size": 608,
+      "sha256": "5aece9beb1f839a5613cf741b0f79efc07cfdae662b6c786ee276dc7198e8b5a"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/category.py",
+      "kind": "python",
+      "size": 499,
+      "sha256": "49e1e435e1ff949e132bde7dd4565a9f99c4a20248dcae785865eb62f2b57316"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/inventory.py",
+      "kind": "python",
+      "size": 580,
+      "sha256": "1ecc25f7e0149c22a08a912053eb6d968219dc637de1ec6096353b2b7eef7b0b"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/product.py",
+      "kind": "python",
+      "size": 1054,
+      "sha256": "db9febfcd4eb9f92f8ca5fbe0291c20584449bc038db18369c1f866fb32e1cfe"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/receipt.py",
+      "kind": "python",
+      "size": 2031,
+      "sha256": "d8982b760f5714e690723f822dea297b727f0b03e7bcdd7e6c085bbe036123cf"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/stock_movement.py",
+      "kind": "python",
+      "size": 509,
+      "sha256": "df7016e6277c0eb4fde0143b3508279414b3079b3ce4188714eb5dd52551b999"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/supplier.py",
+      "kind": "python",
+      "size": 833,
+      "sha256": "1da0c8000ef6a622ff1bbe36828533763aff8c343c01a960d8550e3f4eb9ee30"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/unit.py",
+      "kind": "python",
+      "size": 337,
+      "sha256": "f933ebf619e82591830fc32b27ed0e9963da7eb993f9314f2df77114f7f4481d"
+    },
+    {
+      "path": "thực hành/backend/app/schemas/user.py",
+      "kind": "python",
+      "size": 882,
+      "sha256": "51f61487ef05268282df5c7659827ac1f98998c87b39d33f2e2942991a66b59a"
+    },
+    {
+      "path": "thực hành/backend/app/services/ai_service.py",
+      "kind": "python",
+      "size": 18442,
+      "sha256": "0b6a7fb8b0b5bc651786af683f918cbe0743130907f3658e1890c761ac025eed"
+    },
+    {
+      "path": "thực hành/backend/Dockerfile",
+      "kind": "other",
+      "size": 345,
+      "sha256": "28fc14edf2d7ed72263d4b67610e5e9a322e557258de534bee1b01287263bdff"
+    },
+    {
+      "path": "thực hành/backend/inventory.db",
+      "kind": "database",
+      "size": 147456,
+      "sha256": "7d7b417e1296b729284ae8b468dbce7e53b2a9ba895797863d4578e1f950c7ec"
+    },
+    {
+      "path": "thực hành/backend/requirements.txt",
+      "kind": "other",
+      "size": 262,
+      "sha256": "84bc0f4f262e38464e8a42804500ada4a9db9aa64330e5b5336f24146acad207"
+    },
+    {
+      "path": "thực hành/backend/test_inventory.db",
+      "kind": "database",
+      "size": 147456,
+      "sha256": "3ff9b6795151e671b98f7a79389bfa087f25a428d94226d17343dbc4985c3e64"
+    },
+    {
+      "path": "thực hành/backend/tests/conftest.py",
+      "kind": "python",
+      "size": 2721,
+      "sha256": "7976960e719504684cebc803d6cf28cb6e8f6e07363bf0ea1a840fb118a1ca46"
+    },
+    {
+      "path": "thực hành/backend/tests/test_ai.py",
+      "kind": "python",
+      "size": 1414,
+      "sha256": "a42b10c8f53f0627ef4a846dc8effd9adf2646c140013013c133bfa3ccd63951"
+    },
+    {
+      "path": "thực hành/backend/tests/test_auth.py",
+      "kind": "python",
+      "size": 955,
+      "sha256": "75bfa5a0ff6101787accb4d230c0f2f5f42e579d205216f8e381550418a5fd19"
+    },
+    {
+      "path": "thực hành/backend/tests/test_transactions.py",
+      "kind": "python",
+      "size": 2667,
+      "sha256": "7a881415e87777ceebaf8dd23b4cc926e4536980cef6c916c353cdb71b5c3b9a"
+    },
+    {
+      "path": "thực hành/docker-compose.yml",
+      "kind": "config",
+      "size": 963,
+      "sha256": "95ae23f459fed13a47f16aed88c41b0291054e01efcf332e09962afe283ad2fd"
+    },
+    {
+      "path": "thực hành/docs/ai-evidence/01_phan_tich_nghiep_vu.md",
+      "kind": "documentation",
+      "size": 952,
+      "sha256": "74e766ed0b690414604cd68fe269a486598b8b4eece6feea2d07d8db08bc11d2"
+    },
+    {
+      "path": "thực hành/docs/ai-evidence/04_transaction.md",
+      "kind": "documentation",
+      "size": 1466,
+      "sha256": "2f933689187cdb780b6395171131e260b770897ef88225ee136ae15ef138c2f9"
+    },
+    {
+      "path": "thực hành/docs/final/02_Huong_dan_demo.md",
+      "kind": "documentation",
+      "size": 4457,
+      "sha256": "1b7040ffccb4ef8a288462746092905cfc738d5fb0913e7549855d39e8707ba6"
+    },
+    {
+      "path": "thực hành/docs/final/RUBRIC_CHECKLIST.md",
+      "kind": "documentation",
+      "size": 6186,
+      "sha256": "3c3a2322d6de5c4d43e9f06325b1eb6d56f94901b2bbbbc7d5d7a9bb0aedef13"
+    },
+    {
+      "path": "thực hành/docs/KT1/01_Phan_tich_bai_toan.md",
+      "kind": "documentation",
+      "size": 3941,
+      "sha256": "7185d57fb3b6a5d26a0022031a33958a1e018c03ac2dadcf0cdb4314baf3ab40"
+    },
+    {
+      "path": "thực hành/docs/KT1/02_Yeu_cau_chuc_nang.md",
+      "kind": "documentation",
+      "size": 5037,
+      "sha256": "ad7a3716b072369a6f541320970568c2d2cf3bea82aa6446d6ffca840c325d76"
+    },
+    {
+      "path": "thực hành/docs/KT1/03_Yeu_cau_phi_chuc_nang.md",
+      "kind": "documentation",
+      "size": 2894,
+      "sha256": "af27ceaffe852d15338225f3c15ef639cfb6ff6246811b4ab72e1106c711cb39"
+    },
+    {
+      "path": "thực hành/docs/KT1/04_Actor_UseCase.md",
+      "kind": "documentation",
+      "size": 3680,
+      "sha256": "afcc2e6f15c9e990b1a1fed3e4541cbdbaf674796047f8afdb522c92d87639a5"
+    },
+    {
+      "path": "thực hành/docs/KT1/05_ERD.md",
+      "kind": "documentation",
+      "size": 4722,
+      "sha256": "de4682af9a98dfc4b9f4be5efbab2ab411f8600822c7f5b6eedc2fcf8ce50cb2"
+    },
+    {
+      "path": "thực hành/docs/KT1/06_Kien_truc.md",
+      "kind": "documentation",
+      "size": 3468,
+      "sha256": "10338d125a5d5ab00ace0f4b9ae7554f4a63a54526ed1c5901c6519b90b4ace8"
+    },
+    {
+      "path": "thực hành/docs/KT1/07_Vi_tri_AI.md",
+      "kind": "documentation",
+      "size": 2636,
+      "sha256": "beca22e82602395cc68a574687063cc7e0750580e3bb442eecf94805a4ac82ed"
+    },
+    {
+      "path": "thực hành/docs/KT1/08_Prompt_AI.md",
+      "kind": "documentation",
+      "size": 3334,
+      "sha256": "bcffa057bfa687d107610247eb85dc1fde10855a088f11f093c2bd4055636878"
+    },
+    {
+      "path": "thực hành/docs/KT1/09_Minh_chung_AI.md",
+      "kind": "documentation",
+      "size": 1988,
+      "sha256": "e04f372b386bb23bea17a684db91ab6fd68342d91c7ea88388d2503330886fa4"
+    },
+    {
+      "path": "thực hành/docs/KT1/10_Ke_hoach.md",
+      "kind": "documentation",
+      "size": 2181,
+      "sha256": "84ce07363e3fa6d759090d433e41cb82b86b0957baf53556cefe8c173e58f4e2"
+    },
+    {
+      "path": "thực hành/docs/KT2/01_Kien_truc_source_code.md",
+      "kind": "documentation",
+      "size": 2399,
+      "sha256": "508dedc7a226bb3a19695c1142af3c0d14ecf9fcf14095c87b3b612903dcf495"
+    },
+    {
+      "path": "thực hành/docs/KT2/02_Danh_sach_API.md",
+      "kind": "documentation",
+      "size": 2590,
+      "sha256": "6e224cccad433c9946379382f28b904ef01af86895f4cbe1c5fdf1e2b1c83977"
+    },
+    {
+      "path": "thực hành/docs/KT3/02_Prompt_Experiment.md",
+      "kind": "documentation",
+      "size": 3381,
+      "sha256": "7b166ab84e72c7023ac3aa3b98a08398536509210e7a1b88bb7914476dd09cb2"
+    },
+    {
+      "path": "thực hành/frontend/Dockerfile",
+      "kind": "other",
+      "size": 223,
+      "sha256": "de84df5c7c139f36608e15625dc34993c29231e333bdc997b8bbfec59038dcf0"
+    },
+    {
+      "path": "thực hành/frontend/index.html",
+      "kind": "other",
+      "size": 767,
+      "sha256": "894bf1ed8d355fa63f944e934c9b0a9756024ec9fde07fdc541e6eae41d2683c"
+    },
+    {
+      "path": "thực hành/frontend/package-lock.json",
+      "kind": "json",
+      "size": 116919,
+      "sha256": "b73c0bfc51525eb99da5aadb7a309b06a21b12ebb0a016c971723fb243d16338"
+    },
+    {
+      "path": "thực hành/frontend/package.json",
+      "kind": "json",
+      "size": 664,
+      "sha256": "55cb048450c5e780308ddd23293d3c6b9b663291a93fed84f86128b3c07a6ba1"
+    },
+    {
+      "path": "thực hành/frontend/postcss.config.js",
+      "kind": "javascript",
+      "size": 80,
+      "sha256": "190c877db466995bf1482f4a16abd06e04a89ede3119341e2a86ff96e1737b27"
+    },
+    {
+      "path": "thực hành/frontend/src/App.jsx",
+      "kind": "other",
+      "size": 2557,
+      "sha256": "db1c69ad408d740a0309b8249916b249715eedcb3a6ca8a52e449031fa056b80"
+    },
+    {
+      "path": "thực hành/frontend/src/contexts/AuthContext.jsx",
+      "kind": "other",
+      "size": 1649,
+      "sha256": "981984ce1299f389ae8602cf02fca3211a73e38dcf4e63b52a65c463e5934de7"
+    },
+    {
+      "path": "thực hành/frontend/src/index.css",
+      "kind": "other",
+      "size": 419,
+      "sha256": "9124035c530bc362f848e559f70f2422c834f9b5e083581e2b45620e8bdc21c8"
+    },
+    {
+      "path": "thực hành/frontend/src/layouts/MainLayout.jsx",
+      "kind": "other",
+      "size": 7064,
+      "sha256": "9f73282390745df62354c1cb1502436004d6d1e3745b73d7d882b12df0e8d680"
+    },
+    {
+      "path": "thực hành/frontend/src/main.jsx",
+      "kind": "other",
+      "size": 235,
+      "sha256": "acb24feb3540b5ee687f5a65bdbb81fe3644aa19da89256bc24b18d8ee010410"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/AIAnalysisPage.jsx",
+      "kind": "other",
+      "size": 38431,
+      "sha256": "99dc93780c53158b6d71baea59c8a710e40fbe4a91e8dbf93f882300131ce104"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/CategoriesPage.jsx",
+      "kind": "other",
+      "size": 6194,
+      "sha256": "993abbf9471dead52e2ba017cd2a6676d26ef7220761117112c614bbd04b5a83"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/DashboardPage.jsx",
+      "kind": "other",
+      "size": 11542,
+      "sha256": "24c43ddfddcd1ecd7688d8f669966e76eca7288ea23c84bd68fb7f64445046cc"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/ExportReceiptsPage.jsx",
+      "kind": "other",
+      "size": 14339,
+      "sha256": "51d4cfe89461c6426f67fc364d85e6faffdff2528b8d9f79462dc886ff9ac1ea"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/ImportReceiptsPage.jsx",
+      "kind": "other",
+      "size": 14361,
+      "sha256": "55050d713ebfe54487b40c3cb8b486289d44b97e16a96cbc1988cc6c9b0beb35"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/InventoryPage.jsx",
+      "kind": "other",
+      "size": 5370,
+      "sha256": "bdc6d071e3b16ba717e005a0a0aa75037d74264f6569fcf923a8b66e58ac336e"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/LoginPage.jsx",
+      "kind": "other",
+      "size": 5713,
+      "sha256": "0dea61de2872a97033b3eb76aa84d926acdd010a2053f61ca16c724634e829f5"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/ProductsPage.jsx",
+      "kind": "other",
+      "size": 14354,
+      "sha256": "a2ab0cd4cf7251a38fef77a291a61e5c903bfe64bb4b1014390edd3468b8bc2a"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/ReportsPage.jsx",
+      "kind": "other",
+      "size": 5011,
+      "sha256": "b1b958a7d600bfc30389d9fffcc2e2f6472d7a21185093273c6b7c60a83e772e"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/StockHistoryPage.jsx",
+      "kind": "other",
+      "size": 4814,
+      "sha256": "f53c59378173ec3cc7d5e38a1b2f8f8667f63ea2c25a4be38f607a9a4fe57f37"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/SuppliersPage.jsx",
+      "kind": "other",
+      "size": 9040,
+      "sha256": "c4304aa3445aade4eae13414006d92a9e58bcce2147c70a6afd12fd8fffd7977"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/UnitsPage.jsx",
+      "kind": "other",
+      "size": 5603,
+      "sha256": "f122072f7bb66a6af7b359a08eed1b97c95fb0ba0c3995aed01949e3b4def0df"
+    },
+    {
+      "path": "thực hành/frontend/src/pages/UsersPage.jsx",
+      "kind": "other",
+      "size": 7797,
+      "sha256": "1aa1fab007ee5c3b7b20cdba435076f755d73688cecfa6cd5d3079a73dd8685f"
+    },
+    {
+      "path": "thực hành/frontend/src/services/api.js",
+      "kind": "javascript",
+      "size": 752,
+      "sha256": "a398d5da60a1638993fbbba6e5caeae880fc11aa5c36955a56db9a0315353a10"
+    },
+    {
+      "path": "thực hành/frontend/tailwind.config.js",
+      "kind": "javascript",
+      "size": 255,
+      "sha256": "467e3dccdfa3b4a86deaa347d4631978208130e649326b610a86f23428be508e"
+    },
+    {
+      "path": "thực hành/frontend/vite.config.js",
+      "kind": "javascript",
+      "size": 276,
+      "sha256": "5be3f0d7c4c7109cd34f4197f9a9e6fc7535b1a71dce2dc1d1d2f06a5ebf69d6"
+    },
+    {
+      "path": "thực hành/README.md",
+      "kind": "documentation",
+      "size": 6763,
+      "sha256": "fb542c8b0366406b4f08036c005d42602768fd87614caf00e555694b20dbcf9f"
+    }
+  ]
+}

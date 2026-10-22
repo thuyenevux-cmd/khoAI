@@ -1,0 +1,27 @@
+<mxfile host="app.diagrams.net" modified="2026-09-19T09:00:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="diag_erd" name="ERD">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="tbl_users" value="&lt;b&gt;users&lt;/b&gt;&lt;hr&gt;+ id (PK)&lt;br&gt;+ role_id (FK)&lt;br&gt;+ username&lt;br&gt;+ password_hash" style="swimlane;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_products" value="&lt;b&gt;products&lt;/b&gt;&lt;hr&gt;+ id (PK)&lt;br&gt;+ sku (UNIQUE)&lt;br&gt;+ name&lt;br&gt;+ category_id (FK)&lt;br&gt;+ min_threshold" style="swimlane;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_inventory" value="&lt;b&gt;inventory_items&lt;/b&gt;&lt;hr&gt;+ id (PK)&lt;br&gt;+ product_id (FK)&lt;br&gt;+ location_id (FK)&lt;br&gt;+ quantity" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#10b981;" vertex="1" parent="1">
+          <mxGeometry x="580" y="80" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl_trans" value="&lt;b&gt;inventory_transactions&lt;/b&gt;&lt;hr&gt;+ id (PK)&lt;br&gt;+ code (UNIQUE)&lt;br&gt;+ type (IMPORT/EXPORT)&lt;br&gt;+ created_by (FK)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#f59e0b;" vertex="1" parent="1">
+          <mxGeometry x="840" y="80" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3b82f6;" edge="1" parent="1" source="tbl_products" target="tbl_inventory">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+    
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
